@@ -7,6 +7,7 @@
     <title>Project | Allen Chang's Website</title>
     <link rel="icon" href="/pictures/favicon.ico">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700;1,900&display=swap');
         #side{
             position: fixed;
             width: 10%;
@@ -54,32 +55,110 @@
             width: 89%;
             height: fit-content;
         }
+        .conblock{
+            float: left;
+            width: 97%;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.75);
+            margin-left: 1%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            border-radius: 15px;
+            cursor:pointer;
+            overflow: hidden;
+            transform:scale(1,1);
+            transition: all 0.5s ease-out;
+            color: #000000;
+        }
+        .conblock:hover{
+            transform:scale(1.02,1.02);
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #777777;
+        }
     </style>
 </head>
-<body bgcolor="#e0ff2c">
+<body bgcolor="#81D8D0">
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <div id="side">
         <div id="shead">
-            <a href="index.html">
+            <a href="/">
                 <img src="/pictures/shead.png" style="width: 90%; height: 90%; margin-top: 5%; vertical-align: middle; align-items: center;">
             </a>
             <p style="font-size: smaller;">
                 devoloped by Allen Chang<br>
-                updated on 2023.02.27
+                updated on 2023-02-28
             </p>
         </div>
         <div id="soption">
-            <a href="about.html"><input class="sideb" type="button" value="About" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
-            <a href="project.html"><input class="sideb" type="button" value="Project" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
-            <a href="test.html"><input class="sideb" type="button" value="Test" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
+            <a href="about.html"><input class="sideb" type="button" value="About Me" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
+            <a href="project.html"><input class="sideb" type="button" value="My Project" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
+            <a href="info.html"><input class="sideb" type="button" value="Website Info" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
+            <a href="test.html"><input class="sideb" type="button" value="Test Page" style="font-size: 110%; width: 100%;height: 40px;text-align: center;"></a></br>
         </div>
     </div>
-    <div id="sideleft">
-        0
-    </div>
+    <div id="sideleft">0</div>
     <div id="content">
-        <h1>Project</h1>
-        <p>網頁待完成......</p>
+        <h1 style="font-size: 380%; text-align: left; font-family: 'Raleway', sans-serif; margin-top: 1%; margin-bottom: 1%;">我的作品 My Project</h1>
+        <div class="conblock" onclick="window.open('https://shuba247.github.io')">
+            <div style="float: left; width: 50%;height: 360px; margin: 20px; text-align: center;">
+                <img src="/pictures/project_use/PW.png" style="line-height: 360px; height: 100%;" alt="thumbnail">
+            </div>
+            <div style="float: left; width: 46%; height: 80px; margin-top: 20px;">
+                <p style="font-size: 35px; margin: 0%; margin-bottom: 1%;">我的個人網站</p>
+                <p style="font-size: 25px; margin: 0%;">My Portfolio Website</p>
+            </div>
+            <div style="float: left; width: 46%; height: 2600px; margin-top: 20px; margin-bottom: 20px;">
+                <p style="font-size: 18px;">
+                    由我自己建置的個人網站。<br>
+                    A portfolio website that developed by myself.
+                </p>
+            </div>
+        </div>
+        <div class="conblock" onclick="window.open('https://github.com/shuba247/Shuba_YouTube-video-downloader')">
+            <div style="float: left; width: 50%;height: 360px; margin: 20px; text-align: center;">
+                <img src="/pictures/project_use/YTdownload.png" style="line-height: 360px; height: 100%;" alt="thumbnail">
+            </div>
+            <div style="float: left; width: 46%; height: 80px; margin-top: 20px;">
+                <p style="font-size: 35px; margin: 0%; margin-bottom: 1%;">YouTube影片下載器</p>
+                <p style="font-size: 25px; margin: 0%;">YouTube Video Downloader</p>
+            </div>
+            <div style="float: left; width: 46%; height: 260px; margin-top: 20px; margin-bottom: 20px;">
+                <p style="font-size: 18px;">
+                    110學年度第2學期自主學習項目。<br>
+                    Self-directed study project in the second semester of the 110 academic year.
+                </p>
+            </div>
+        </div>
+        <div class="conblock" onclick="window.open('/')">
+            <div style="float: left; width: 50%;height: 360px; margin: 20px; text-align: center;">
+                <img src="/" style="line-height: 360px; height: 100%;" alt="thumbnail">
+            </div>
+            <div style="float: left; width: 46%; height: 80px; margin-top: 20px;">
+                <p style="font-size: 35px; margin: 0%; margin-bottom: 1%;">標題</p>
+                <p style="font-size: 25px; margin: 0%;">Title</p>
+            </div>
+            <div style="float: left; width: 46%; height: 260px; margin-top: 20px; margin-bottom: 20px;">
+                <p style="font-size: 18px;">
+                    中文介紹<br>
+                    English introduce
+                </p>
+            </div>
+        </div>
+        <div class="conblock" onclick="window.open('/')">
+            <div style="float: left; width: 50%;height: 360px; margin: 20px; text-align: center;">
+                <img src="/" style="line-height: 360px; height: 100%;" alt="thumbnail">
+            </div>
+            <div style="float: left; width: 46%; height: 80px; margin-top: 20px;">
+                <p style="font-size: 35px; margin: 0%; margin-bottom: 1%;">標題</p>
+                <p style="font-size: 25px; margin: 0%;">Title</p>
+            </div>
+            <div style="float: left; width: 46%; height: 260px; margin-top: 20px; margin-bottom: 20px;">
+                <p style="font-size: 18px;">
+                    中文介紹<br>
+                    English introduce
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
