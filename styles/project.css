@@ -1,0 +1,60 @@
+.problock{
+    float: left;
+    width: 97%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-left: 1%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    border-radius: 15px;
+    cursor:pointer;
+    overflow: hidden;
+    transform:scale(1,1);
+    transition: all 0.5s ease-out;
+    color: #000000;
+    box-shadow: 0 10px 10px -5px;
+}
+.problock:hover{
+    transform:scale(1.02,1.02);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #777777;
+    box-shadow: 0 10px 10px -5px;
+}
+.proimage{
+    float: left;
+    width: 50%;
+    height: 360px;
+    margin: 20px;
+    text-align: center;
+}
+.proimage img{
+    line-height: 360px;
+    height: 100%;
+}
+.protitle{
+    float: left;
+    width: 46%;
+    height: 80px;
+    margin-top: 20px;
+}
+.prozhtitle{
+    font-size: 35px;
+    margin: 0%;
+    margin-bottom: 1%;
+}
+.proentitle{
+    font-size: 25px;
+    margin: 0%;
+    font-family: 'Labrada', serif;
+}
+.procontent{
+    float: left;
+    width: 46%;
+    height: 260px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.probrief{
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
