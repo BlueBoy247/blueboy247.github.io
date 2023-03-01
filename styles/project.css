@@ -30,6 +30,7 @@
 .proimage img{
     line-height: 360px;
     height: 100%;
+    overflow: hidden;
 }
 .protitle{
     float: left;
