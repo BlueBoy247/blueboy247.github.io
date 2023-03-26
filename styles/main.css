@@ -1,52 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Labrada:ital@0;1&family=Noto+Sans+TC&family=Raleway:ital,wght@1,700;1,900&display=swap');
-#side{
-    position: fixed;
-    width: 10%;
-    height: 100%;
-    overflow-y: auto;
+*{
     overflow-x: hidden;
-    background-color: #000000;
-    text-align: center;
-    color: #ffffff;
+    margin: 0;
+}
+/*header*/
+header{
+    display: flex;
+    height: auto;
+    width: 99vw;
+    height: 8vh;
+    padding: 0 0.5vw;
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 1000;
+    z-index: 2023;
+    align-items: stretch;
+    justify-content: center;
+    background-color: #81D8D0;
 }
 #shead{
-    float: left;
-    width: 100%;
-    height: fit-content;
+    width: 50vw;
+    display: inline-flex;
+    height: inherit;
+    align-items: center;
+    margin: 0%;
 }
-#soption{
-    float: left;
-    width: 100%;
-    height: fit-content;
+#shead img{
+    justify-content: center;
+    height: 70%; 
 }
-.sideb{
+#link-button{
+    float: right;
+    height: inherit;
+    margin: 0%;
+    padding: 0%;
+}
+.navb{
+    display: inline-flex;
     border: 0;
-    background-color: #000000;
-    color: #ffffff;
+    color: #2d726b;
+    text-decoration: none;
     cursor: pointer;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-size: 120%;
-    width: 100%;
-    height: 40px;
-    text-align: center;
+    font-size: 20px;
+    width: 150px;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5vw;
+    transition: 0.3s;
 }
-.sideb:hover{
+.navb:hover{
     border: 0;
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
+    background-color: #46ada3;
 }
-#sideleft{
+/*main content*/
+main{
     float: left;
-    width: 11%;
+    width: 98vw;
     height: fit-content;
-    color: #e0ff2c;
+    margin: 1vw;
+    height: max-content;
 }
-#content{
-    float: left;
-    width: 89%;
-    height: fit-content;
+/*footer*/
+footer{
+    width: 100vw;
+    height: 10vh;
+    padding: 0 0.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #46ada3;
+}
+#siterights{
+    color: #ffffff;
+    margin: 1px;
+    text-align: center;
+    font-size: 20px;
+    display: inline;
+}
+#contactinfo{
+    display: flex;
+    width: 50vw;
+    height: inherit;
+    margin: 0%;
+    padding: 0 0.5vw;
+    align-items: center;
+    justify-content: center;
+}
+.contact{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    fill: #2d726b;
+    color: #2d726b;
+    transition: 0.3s;
+    text-decoration: none;    
+}
+.contact:hover{
+    color: #ffffff;
+    fill:#ffffff;
+}
+/*other*/
+.inline-block{
+    display: inline-block;
 }
