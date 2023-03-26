@@ -26,17 +26,17 @@
     height: 360px;
     margin: 20px;
     text-align: center;
+    overflow: hidden;
 }
 .proimage img{
-    line-height: 360px;
     height: 100%;
-    overflow: hidden;
 }
 .protitle{
     float: left;
     width: 46%;
-    height: 80px;
+    height: 30%;
     margin-top: 20px;
+    overflow: hidden;
 }
 .prozhtitle{
     font-size: 35px;
@@ -46,16 +46,15 @@
 .proentitle{
     font-size: 25px;
     margin: 0%;
-    font-family: 'Labrada', serif;
 }
 .procontent{
     float: left;
     width: 46%;
-    height: 260px;
+    height: 70%;
     margin-top: 20px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .probrief{
     font-size: 18px;
-    font-family: 'Noto Sans TC', sans-serif;
 }

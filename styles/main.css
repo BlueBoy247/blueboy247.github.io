@@ -3,19 +3,36 @@
     overflow-x: hidden;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    width: 7px;
+}
+body::-webkit-scrollbar-button {
+    background: transparent;
+    border-radius: 4px;
+    height: 5px;
+}
+body::-webkit-scrollbar-track-piece {
+    background: #bbbbbb;
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid slategrey;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: #bbbbbb;
+    border-radius: 4px;
+}
 /*header*/
 header{
-    display: flex;
-    height: auto;
-    width: 99vw;
-    height: 8vh;
-    padding: 0 0.5vw;
+    height: 9vh;
+    padding: 0 1.5vw;
     position: sticky;
     top: 0;
-    z-index: 2023;
-    align-items: stretch;
-    justify-content: center;
+    z-index: 9999;
     background-color: #81D8D0;
+    overflow: hidden;
 }
 #shead{
     width: 50vw;
@@ -26,7 +43,7 @@ header{
 }
 #shead img{
     justify-content: center;
-    height: 70%; 
+    height: 90%; 
 }
 #link-button{
     float: right;
@@ -51,15 +68,43 @@ header{
 .navb:hover{
     border: 0;
     color: #ffffff;
-    background-color: #46ada3;
+    background-color: #2d726b;
 }
 /*main content*/
 main{
     float: left;
-    width: 98vw;
-    height: fit-content;
-    margin: 1vw;
+    width: 100vw;
     height: max-content;
+    overflow: hidden;
+}
+.pagetitle{
+    display: flex;
+    height: 15vh;
+    padding: 0 0.5vh;
+    background-color: #46ada3;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.pagesubtitle{
+    display: flex;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    overflow: hidden;
+}
+.pagesubtitle p{
+    padding: 8px;
+    border: solid 5px #46ada3;
+    border-radius: 20px;
+}
+.content{
+    padding: 0 1vw;
+    margin-bottom: 25px;
+    overflow: hidden;
 }
 /*footer*/
 footer{
@@ -71,6 +116,7 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: #46ada3;
+    overflow: hidden;
 }
 #siterights{
     color: #ffffff;
@@ -79,30 +125,17 @@ footer{
     font-size: 20px;
     display: inline;
 }
-#contactinfo{
-    display: flex;
-    width: 50vw;
-    height: inherit;
-    margin: 0%;
-    padding: 0 0.5vw;
-    align-items: center;
-    justify-content: center;
-}
-.contact{
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    fill: #2d726b;
-    color: #2d726b;
-    transition: 0.3s;
-    text-decoration: none;    
-}
-.contact:hover{
-    color: #ffffff;
-    fill:#ffffff;
-}
+
 /*other*/
 .inline-block{
     display: inline-block;
+}
+.zhw{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.enw1{
+    font-family: 'Raleway', sans-serif;
+}
+.enw2{
+    font-family: 'Labrada', serif;
 }

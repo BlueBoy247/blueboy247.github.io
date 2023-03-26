@@ -11,7 +11,23 @@
     <link rel="preload" href="/scripts/countdownSUBARU.js">
     <link rel="preload" href="/scripts/countdownGSAT.js">
     <style>
-
+        #hometitle{
+            display: flex;
+            background-image: url(/pictures/homepage_bg.jpg);
+            background-size: cover;
+            background-position: bottom;
+            height: 70vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .countdown{
+            width: 50vw;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body bgcolor="#81D8D0">
@@ -20,19 +36,30 @@
             <img src="/pictures/shead.png">
         </a>
         <div id="link-button">
-            <a class="navb" href="/about/">關於 About</a>
+            <!--<a class="navb" href="/article/">文章 Articles</a>-->
             <a class="navb" href="/project/">專案 Projects</a>
-            <a class="navb" href="/article/">文章 Articles</a>
+            <a class="navb" href="/about/">關於 About</a>
+            <!--<a class="navb" href="/en/">English</a>-->
         </div>
     </header>
-    <main style="height: 80vh;">
-        <div style="width: 50%; float: left; margin-top: 30px;">
+    <main>
+        <div id="hometitle">
+            <p class="zhw" style="font-size: 100px;">只屬於藍色少年的宇宙</p>
+        </div>
+        <div id="newpost"></div>
+        <div class="pagesubtitle">
+            <p>
+                <span class="zhw">活動倒數 </span>
+                <span class="enw1">Countdown</span>
+            </p>
+        </div>
+        <div class="countdown">
             <script async src="/scripts/countdownGSAT.js"></script>
             <a data-type="countdown" data-id="3886391" class="tickcounter" style="display: block; width: 100%;" title="Countdown" href="//www.tickcounter.com/">
                 Countdown(113GSAT)
             </a>
         </div>
-        <div style="width: 50%; float: left; margin-top: 30px;">
+        <div class="countdown">
             <script async src="/scripts/countdownSUBARU.js"></script>
             <a data-type="countdown" data-id="3885131" class="tickcounter" style="display: block; width: 100%; " title="Countdown" href="//www.tickcounter.com/">
                 Countdown(oozora_subaru_BD)
