@@ -74,7 +74,6 @@ header{
 main{
     float: left;
     width: 100vw;
-    height: max-content;
     overflow: hidden;
 }
 .pagetitle{
