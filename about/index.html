@@ -8,11 +8,34 @@
     <link rel="icon" href="/pictures/favicon.ico">
     <link rel="stylesheet" href="/styles/main-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">
     <link rel="stylesheet" href="/styles/main.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" href="/styles/project.css" media="screen and (min-width: 992px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Labrada:ital@0;1&family=Noto+Sans+TC:wght@400;700;900&family=Raleway:ital,wght@1,700;1,900&family=Righteous&display=swap" rel="stylesheet">
     <link rel="preload" href="/pictures/profile.png" as="image">
     <style>
+        #webtime{
+            width: 90%;
+            border-collapse:collapse;
+        }
+        #webtime tr{
+            height: 60px;
+            border-bottom: solid 5px #2d726b;
+        }
+        #webtime .time{
+            width: 13%;
+            text-align: center;
+            font-size: 20px;
+        }
+        #webtime .tag{
+            width: 10%;
+            text-align: center;
+            font-size: 20px;
+        }
+        #webtime .event{
+            width: 77%;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body bgcolor="#81D8D0">
@@ -20,26 +43,26 @@
         <a id="shead" href="/">
             <img src="/pictures/shead.png">
         </a>
-        <div id="link-button">
-            <!--<a class="navb" href="/article/">文章 Articles</a>-->
-            <a class="navb" href="/project/">專案 Projects</a>
+        <nav>
+            <a class="navb">記事 Blog</a>
+            <a class="navb">文章 Articles</a>
             <a class="navb" href="/about/">關於 About</a>
-            <!--<a class="navb" href="/en/">English</a>-->
-        </div>
+        </nav>
     </header>
     <main>
-        <div class="pagetitle">
-            <p>
+        <div class="pagehead">
+            <p class="pagetitle">
                 <span class="zhw">關於 </span>
-                <span class="enw1">About</span></p>
-        </div>
-        <div class="pagesubtitle">
-            <p>
-                <span class="zhw">個人簡介 </span>
-                <span class="enw1">About Me</span>
+                <span class="enw1">About</span>
             </p>
         </div>
-        <div class="content">
+        <div class="pagesubtitle" id="profile">
+            <p>
+                <span class="zhw">個人簡介 </span>
+                <span class="enw1">My Profile</span>
+            </p>
+        </div>
+        <div class="content" id="profilec">
             <p>#未完成......</p>
             <div style="width: 10%; height: 10%; margin-right: 1%; float: left;">
                 <img src="/pictures/profile.png" style="width: 100%;" alt="avatar">
@@ -111,16 +134,172 @@
                 </details>
             </div>
         </div>
-        <div class="pagesubtitle">
+        <div class="pagesubtitle" id="project">
+            <p>
+                <span class="zhw">我的專案 </span>
+                <span class="enw1">My Projects</span>
+            </p>
+        </div>
+        <div class="content" id="projectc">
+            <a href="https://github.com/BlueBoy247/YouTube-video-downloader" target="_blank">
+                <div class="problock">
+                    <div class="protitle">
+                        <span class="prozhtitle zhw">YouTube影片下載器 </span>
+                        <span class="proentitle enw2">YouTube Video Downloader</span>
+                    </div>
+                    <div class="proimage">
+                        <img src="/pictures/project_use/YTdownload.png" alt="thumbnail" title="YouTube Video Downloader">
+                    </div>
+                    <div class="procontent">
+                        <p class="probrief">
+                            <span class="zhw">110學年度第2學期自主學習項目<br></span>
+                            <span class="enw2">
+                                Self-directed Learning project in the second semester of the 110 academic year.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://blueboy247.github.io/" target="_blank">
+                <div class="problock">
+                    <div class="protitle">
+                        <span class="prozhtitle zhw">我的個人網站</span>
+                        <span class="proentitle enw2">My Personal Website</span>
+                    </div>
+                    <div class="proimage">
+                        <img src="/pictures/project_use/PW.png" alt="thumbnail" title="My Personal Website">
+                    </div>
+                    <div class="procontent">
+                        <p class="probrief">
+                            <span class="zhw">由我自己建置的個人網站，也就是你現在所在的網站<br></span>
+                            <span class="enw2">A website that developed by myself, which is where you are now.</span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/" target="_blank">
+                <div class="problock">
+                    <div class="protitle">
+                        <p class="prozhtitle zhw">標題</p>
+                        <p class="proentitle enw2">Title</p>
+                    </div>
+                    <div class="proimage">
+                        <img src="/" alt="thumbnail" title="">
+                    </div>
+                    <div class="procontent">
+                        <p class="probrief">
+                            <span class="zhw">中文敘述<br></span>
+                            <span class="enw2">English introduce</span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/" target="_blank">
+                <div class="problock">
+                    <div class="protitle">
+                        <p class="prozhtitle zhw">標題</p>
+                        <p class="proentitle enw2">Title</p>
+                    </div>
+                    <div class="proimage">
+                        <img src="/" alt="thumbnail" title="">
+                    </div>
+                    <div class="procontent">
+                        <p class="probrief">
+                            <span class="zhw">中文敘述<br></span>
+                            <span class="enw2">English introduce</span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="pagesubtitle" id="website">
             <p>
                 <span class="zhw">關於本站 </span>
                 <span class="enw1">About Website</span>
             </p>
         </div>
-        <div class="content">
+        <div class="content" id="websitec"></div>
+        <div class="pagesubtitle" id="devnote">
             <p>
-                本網站由我本人(BlueBoy247)自行開發，有關本站詳細內容與資訊，請見<a href="/about/website/" style="color: #000000;">關於本網站</a>頁面。
+                <span class="zhw">建置記事 </span>
+                <span class="enw1">Devolopment Notes</span>
             </p>
+        </div>
+        <div class="content" id="devnotec" style="display: flex; align-items: center; justify-content: center;">
+            <table id="webtime">
+                <!--
+                <tr>
+                    <td class="time enw3">2023-06-xx</td>
+                    <td class="tag zhw">#首頁</td>
+                    <td class="event zhw">完成最新文章擷取程式之開發</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-06-xx</td>
+                    <td class="tag zhw">#記事</td>
+                    <td class="event zhw">完成頁面設計與文章發布程式之開發，並啟用該頁面</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-06-xx</td>
+                    <td class="tag zhw">#文章</td>
+                    <td class="event zhw">完成頁面設計與文章發布程式之開發，並啟用該頁面</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-05-xx</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">完成全站RWD響應式網頁設計之CSS</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-05-xx</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">新增網站訪問人次統計(透過Google Analytics)</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-04-xx</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">完成各頁面標題區塊內容導航列</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-04-xx</td>
+                    <td class="tag zhw">#關於</td>
+                    <td class="event zhw">完成個人簡介區塊</td>
+                </tr>
+                -->
+                <tr>
+                    <td class="time enw3">2023-03-27</td>
+                    <td class="tag zhw">#首頁</td>
+                    <td class="event zhw">頁面更新</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-03-26</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">網站排版設計更新，並將導航列自頁面左側移至頁面上方</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-03-01</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">網站更名為 "BlueBoy's Space"</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-02-28</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">完成網站CSS設計</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-02-19</td>
+                    <td class="tag zhw">#全站</td>
+                    <td class="event zhw">建立網站(透過GitHub Pages)，命名為 "Allen Chang's Website"</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-02-18</td>
+                    <td class="tag zhw">#建置</td>
+                    <td class="event zhw">完成網站HTML撰寫</td>
+                </tr>
+                <tr>
+                    <td class="time enw3">2023-02-13</td>
+                    <td class="tag zhw">#建置</td>
+                    <td class="event zhw">完成網站架構之規劃</td>
+                </tr>
+            </table>
         </div>
     </main>
     <footer>
