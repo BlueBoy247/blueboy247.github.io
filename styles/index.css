@@ -47,6 +47,54 @@ header{
     justify-content: center;
     color: #ffffff;
 }
+#in-link-button{
+    height: 25%;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+.inb{
+    display: inline-flex;
+    border: solid 2px #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 150px;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5vw;
+    transition: 0.3s;
+    margin: 0 0.5vw;
+}
+.inb:hover{
+    border: solid 2px #46ada3;
+    color: #ffffff;
+    background-color: #46ada3;
+}
+#out-link-button{
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+.outb{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #ffffff;
+    fill:#ffffff;
+    transition: 0.3s;
+    text-decoration: none;
+    margin: 0 0.5vw;
+}
+.outb:hover{
+    fill: #46ada3;
+    color: #46ada3;
+}
 #down{
     display: inline-flex;
     font-size: 100px;
@@ -63,32 +111,6 @@ header{
 }
 #down p:hover{
     color: #46ada3;
-}
-#link-button{
-    height: 25%;
-    margin: 0%;
-    padding: 0%;
-}
-.navb{
-    display: inline-flex;
-    border: solid 2px #ffffff;
-    border-radius: 10px;
-    color: #ffffff;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 20px;
-    width: 150px;
-    height: inherit;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0.5vw;
-    transition: 0.3s;
-    margin: 0 0.5vw;
-}
-.navb:hover{
-    border: solid 2px #2d726b;
-    color: #ffffff;
-    background-color: #2d726b;
 }
 /*main content*/
 main{
