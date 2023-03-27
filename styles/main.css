@@ -44,7 +44,7 @@ header{
     justify-content: center;
     height: 90%; 
 }
-#link-button{
+nav{
     float: right;
     height: inherit;
     margin: 0%;
@@ -75,16 +75,22 @@ main{
     width: 100vw;
     overflow: hidden;
 }
-.pagetitle{
+.pagehead{
     display: flex;
-    height: 15vh;
+    height: 40vh;
     padding: 0 0.5vh;
-    background-color: #46ada3;
-    font-size: 50px;
+    background-image: url(/pictures/title_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
     overflow: hidden;
+}
+.pagetitle{
+    font-size: 75px;
+    /*height: 50%;*/
 }
 .pagesubtitle{
     display: flex;
