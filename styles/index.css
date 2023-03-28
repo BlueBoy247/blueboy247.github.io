@@ -152,11 +152,11 @@ main{
 #newpostblock .time{
     width: 20%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 #newpostblock .posttitle{
     width: 80%;
-    font-size: 30px;
+    font-size: 20px;
 }
 .countdown{
     width: 50vw;
