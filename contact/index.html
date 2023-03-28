@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | BlueBoy's Space</title>
+    <link rel="icon" href="/pictures/favicon.ico">
+    <link rel="stylesheet" href="/styles/main-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">
+    <link rel="stylesheet" href="/styles/main.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" href="/styles/contact-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">
+    <link rel="stylesheet" href="/styles/contact.css" media="screen and (min-width: 992px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Labrada:ital@0;1&family=Noto+Sans+TC:wght@400;700;900&family=Raleway:ital,wght@1,700;1,900&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPCV2CWSBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VPCV2CWSBB');
+    </script>
+</head>
+<body bgcolor="#81D8D0">
+    <header>
+        <a id="shead" href="/">
+            <img src="/pictures/shead.png">
+        </a>
+        <nav>
+            <a class="navb">記事 Blog</a>
+            <a class="navb">文章 Articles</a>
+            <a class="navb" href="/about/">關於 About</a>
+            <a class="navb" href="/contact/">聯絡 contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="pagehead">
+            <p class="pagetitle">
+                <span class="zhw">聯絡 </span>
+                <span class="enw1">Contact</span>
+            </p>
+        </div>
+        <div id="form">
+            <form method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
+                <ul>
+                    <li class="center">
+                        <label for="sender" style="display: flex; align-items: center;">姓名 Name&ensp;<span style="color: red;">*</span></label>
+                        <input type="text" class="text" id="sender" name="sender" placeholder="您的姓名 Your Name" required>
+                    </li>
+                    <li class="center">
+                        <label for="email" style="display: flex; align-items: center;">電子信箱 Email&ensp;<span style="color: red;">*</span></label>
+                        <input type="email" class="text" id="email" name="email" placeholder="您的電子信箱 Your E-mail Address" required>
+                    </li>
+                    <li>
+                        <label for="purpose">聯絡目的 Purpose&ensp;<span style="color: red;">*</span></label>
+                        <div style="display: inline-block;">
+                            <input type="radio" name="type" class="option" id="purpose" value="contact" required checked><span class="optionw">一般聯絡 Normal Contact</span><br>
+                            <input type="radio" name="type" class="option" id="purpose" value="business" required><span class="optionw">商業接洽 Business Contact</span><br>
+                            <input type="radio" name="type" class="option" id="purpose" value="suggest" required><span class="optionw">網站改善建議 Suggestions for website improvement</span>
+                        </div>
+                    </li>
+                        <li>
+                        <label for="content">內容 Content&ensp;<span style="color: red;">*</span></label>
+                        <textarea name="content" id="content" maxlength="6000" placeholder="請輸入訊息 Enter your message" required></textarea>
+                    </li>
+                </ul>
+                <div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div>
+                <div id="buttonblock">
+                    <button name="submit" type="submit">送出 Submit</button>
+                    <button name="reset" type="reset">重填 Reset</button>
+                </div>
+                <p style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p id="siterights">
+            <a href="https://github.com/BlueBoy247/blueboy247.github.io/blob/main/README.md" style="text-decoration: none; color: #6cfccc;" target="_blank">
+                BlueBoy247
+            </a>
+             © 2023 All rights reserved.
+        </p>
+    </footer>
+    <script>
+        var textarea = document.querySelector('textarea');
+
+        textarea.addEventListener('input', (e) => {
+            textarea.style.height = '100px';
+            textarea.style.height = e.target.scrollHeight + 'px';
+        });
+    </script>
+</body>
+</html>
