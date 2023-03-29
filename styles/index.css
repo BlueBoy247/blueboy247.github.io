@@ -62,7 +62,7 @@ header{
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
-    width: 150px;
+    width: 120px;
     height: inherit;
     justify-content: center;
     align-items: center;
@@ -103,6 +103,11 @@ header{
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    animation-name: movedown;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
 }
 #down p{
     font-size: 100px;
@@ -112,6 +117,14 @@ header{
 }
 #down p:hover{
     color: #46ada3;
+}
+@keyframes movedown{
+    from{
+        margin-top: -15px;
+    }
+    to{
+        margin-top: 10px;
+    }
 }
 /*main content*/
 main{
