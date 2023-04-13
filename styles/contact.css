@@ -84,3 +84,6 @@ button{
 button:hover{
     background-color: #46ada3;
 }
+button:active{
+    transform: scale(0.9);
+}
