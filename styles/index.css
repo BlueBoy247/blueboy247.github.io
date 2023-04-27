@@ -40,16 +40,16 @@ header{
 }
 #hometitle{
     display: inline-flex;
-    height: 48%;
+    height: 48vh;
     margin-bottom: 2%;
-    font-size: 125px;
+    font-size: 20vh;
     overflow: hidden;
     align-items:end;
     justify-content: center;
     color: #ffffff;
 }
 #in-link-button{
-    height: 15%;
+    height: 15vh;
     margin: 0%;
     padding: 0%;
     overflow: hidden;
@@ -77,7 +77,7 @@ header{
     background-color: #46ada3;
 }
 #out-link-button{
-    height: 10%;
+    height: 10vh;
     margin: 2% 0%;
     padding: 0%;
     overflow: hidden;
@@ -100,7 +100,7 @@ header{
 #down{
     display: inline-flex;
     font-size: 80px;
-    height: 7%;
+    height: 7vh;
     overflow: hidden;
     align-items: center;
     justify-content: center;
