@@ -76,7 +76,7 @@ main{
 }
 .pagehead{
     display: flex;
-    height: 40vh;
+    height: 30vh;
     padding: 0 0.5vh;
     background-image: url(/pictures/title_bg.png);
     background-size: cover;
