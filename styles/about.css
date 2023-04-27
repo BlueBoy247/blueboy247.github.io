@@ -1,3 +1,4 @@
+/*project part*/
 .problock{
     float: left;
     width: 46%;
@@ -64,4 +65,28 @@
 }
 .probrief{
     font-size: 18px;
+}
+
+/*webtime part*/
+#webtime{
+    width: 90%;
+    border-collapse:collapse;
+}
+#webtime tr{
+    height: 60px;
+    border-bottom: solid 5px #2d726b;
+}
+#webtime .time{
+    width: 13%;
+    text-align: center;
+    font-size: 20px;
+}
+#webtime .tag{
+    width: 10%;
+    text-align: center;
+    font-size: 20px;
+}
+#webtime .event{
+    width: 77%;
+    font-size: 20px;
 }
