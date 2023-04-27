@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/scripts/include.js"></script>
     <title>Blog | BlueBoy's Space</title>
-    <link rel="stylesheet" href="/styles/main-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">
-    <link rel="stylesheet" href="/styles/main.css" media="screen and (min-width: 992px)">
+    <script>include('Blog')</script>
+    <style>
+        #postblock{
+            width: 80%;
+            border-collapse:collapse;
+            margin: 0 auto;
+            padding-inline-start: 0;
+        }
+        #postblock li{
+            padding: 20px 0;
+            border-bottom: solid 5px #2d726b;
+        }
+        #postblock .time{
+            width: 20%;
+            text-align: center;
+            font-size: 25px;
+        }
+        #postblock .posttitle{
+            width: 80%;
+            font-size: 25px;
+            text-decoration: none;
+            margin-left: 1vw;
+        }
+    </style>
 </head>
 <body bgcolor="#81D8D0">
     <header></header>
-    <main style="height: 80vh;">
+    <main style="min-height: 85vh;">
         <div class="pagehead">
             <p class="pagetitle">
                 <span class="zhw">記事 </span>
                 <span class="enw1">Blog</span>
             </p>
+        </div>
+        <div id="post">
+            <div class="content">
+                <ul id="postblock"></ul>
+                <ol id="pagenum"></ol>
+            </div>
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9189513725790874" crossorigin="anonymous"></script>
         <!-- 橫幅 -->
@@ -24,5 +52,6 @@
         </script>
     </main>
     <footer></footer>
+    <script>listPostsPage();</script>
 </body>
 </html>
