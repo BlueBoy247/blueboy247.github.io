@@ -36,7 +36,7 @@ function showPostContent(postFile){
     url: `/blog/posts/${postFile}/index.txt`,
     async: false,
     success: function(data){
-      let content = data.split('\r\n');
+      let content = data.split('\n');
       let postTime = content[0];
       let postTitle = content[1];
       $('head').append(`<title>${postTitle} - Blog | BlueBoy's Space</title>`);
@@ -76,7 +76,7 @@ function listPostsBlock(startNum,endNum){
     url: '/blog/postlist.txt',
     async: false,
     success: function(data){
-      fileList = data.split('\r\n');
+      fileList = data.split('\n');
     }
   });
   if (fileList[0]==''){
