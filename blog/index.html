@@ -6,7 +6,7 @@
     <script>include('Blog')</script>
     <style>
         #postblock{
-            width: 80%;
+            width: 90%;
             border-collapse: collapse;
             margin: 0 auto;
         }
@@ -24,6 +24,25 @@
             width: 80%;
             font-size: 25px;
             color: black;
+        }
+        #pagenum{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px auto;
+            padding-inline-start: 0px;
+            width: 60%;
+        }
+        #pagenum li{
+            width: 20px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            border: solid 5px #2d726b;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+        }
+        #pagenum li:hover{
+            background-color: #2d726b;
         }
     </style>
 </head>
