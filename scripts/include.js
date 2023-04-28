@@ -15,7 +15,9 @@ function include(pagename){
     $(document).ready(function() {
       $('header').load('/public/header.html');
     });
-    $('head').append(`<title>${pagename} | BlueBoy's Space</title>`);
+    if(pagename!=='Post'){
+      $('head').append(`<title>${pagename} | BlueBoy's Space</title>`);
+    }
     $('head').append(`<link rel="stylesheet" href="/styles/main.css" media="screen and (min-width: 992px)">`);
     $('head').append(`<link rel="stylesheet" href="/styles/main-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
   }
@@ -25,6 +27,31 @@ function include(pagename){
     $('head').append(`<link rel="stylesheet" href="/styles/${cssname}.css" media="screen and (min-width: 992px)">`);
     $('head').append(`<link rel="stylesheet" href="/styles/${cssname}-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
   }
+}
+
+function showPostContent(postFile){
+  $('head').append(`<link rel="stylesheet" href="/styles/post.css">`);
+  $('head').append(`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />`);
+  $.ajax({
+    url: `/blog/posts/${postFile}/index.txt`,
+    async: false,
+    success: function(data){
+      let content = data.split('\r\n');
+      let postTime = content[0];
+      let postTitle = content[1];
+      $('head').append(`<title>${postTitle} - Blog | BlueBoy's Space</title>`);
+      $('#post').append(`<p id="postdetail"><span class="material-symbols-outlined" id="back"> <a href="/blog/">chevron_left</a> </span><span class="enw3" id="posttime">${postTime}</span><span class="zhw" id="posttitle">${postTitle}</span></p>`);
+      $('#post').append(`<div id="postdiv"></div>`);
+      for (let i=2; i<content.length;i++){
+        let postContent = content[i];
+        if (content[i]==''){
+          $('#postdiv').append(`<p id="postcontent"><br></p>`);
+        }else{
+          $('#postdiv').append(`<p id="postcontent">${postContent}</p>`);
+        }
+      }
+    }
+  });
 }
 
 function listPostsPage(){
@@ -52,10 +79,10 @@ function listPostsBlock(startNum,endNum){
       fileList = data.split('\r\n');
     }
   });
-  console.log(fileList);
   if (fileList[0]==''){
     $('#post').prepend(`<p style="text-align: center; font-size: 25px;">目前沒有文章......</p>`);
   }
+  fileList.reverse();
   for (let i=startNum; i<startNum+endNum && i<fileList.length; i++) {
     let postName=fileList[i];
     let postUrl=`/blog/posts/${postName}`;
@@ -66,7 +93,7 @@ function listPostsBlock(startNum,endNum){
         let content = post.split('\n');
         let time = content[0];
         let posttitle = content[1];
-        $('#postblock').append(`<li><span class="time enw3">${time} </span><a href="${postUrl}" class="posttitle zhw">${posttitle}</a></li>`);
+        $('#postblock').append(`<tr><td class="time enw3">${time} </td><td><a href="${postUrl}" class="posttitle zhw">${posttitle}</a><td></tr>`);
       }
     });
   }
