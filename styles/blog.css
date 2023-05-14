@@ -1,0 +1,56 @@
+#postblock{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+#postblock tr{
+    height: 75px;
+    border-bottom: solid 5px #2d726b;
+}
+#postblock .time{
+    width: 200px;
+    text-align: center;
+    padding: 0 30px;
+    font-size: 25px;
+}
+#postblock .posttitle{
+    width: calc(100%-200px);
+    font-size: 25px;
+    color: black;
+}
+#pagenum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding-inline-start: 0px;
+    width: 60%;
+    list-style-type: none;
+}
+#pagenum .num{
+    width: 40px;
+    font-size: 20px;
+    margin: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: solid 5px #2d726b;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+#pagenum .num:hover{
+    background-color: #2d726b;
+}
+#pagenum .nownum{
+    width: 40px;
+    font-size: 20px;
+    margin: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: solid 5px #2d726b;
+    background-color: #2d726b;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+#pagenum .ry{
+    font-size: 20px;
+}

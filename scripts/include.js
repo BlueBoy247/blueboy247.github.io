@@ -8,8 +8,8 @@ function include(pagename){
 
   if(pagename==='Index'){
     $('head').append(`<title>BlueBoy's Space</title>`);
-    $('head').append(`<link rel="stylesheet" href="/styles/index.css" media="screen and (min-width: 992px)">`);
-    $('head').append(`<link rel="stylesheet" href="/styles/index-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
+    $('head').append(`<link rel="stylesheet" href="/styles/index.css"><!-- media="screen and (min-width: 992px)"-->`);
+    //$('head').append(`<link rel="stylesheet" href="/styles/index-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
     $('head').append(`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />`);
   }else{
     $(document).ready(function() {
@@ -18,14 +18,14 @@ function include(pagename){
     if(pagename!=='Post'){
       $('head').append(`<title>${pagename} | BlueBoy's Space</title>`);
     }
-    $('head').append(`<link rel="stylesheet" href="/styles/main.css" media="screen and (min-width: 992px)">`);
-    $('head').append(`<link rel="stylesheet" href="/styles/main-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
+    $('head').append(`<link rel="stylesheet" href="/styles/main.css"><!-- media="screen and (min-width: 992px)"-->`);
+    //$('head').append(`<link rel="stylesheet" href="/styles/main-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
   }
 
-  if (pagename==='About' || pagename==='Contact'){
+  if (pagename==='About' || pagename==='Contact' || pagename==='Blog'){
     let cssname=pagename.toLowerCase()
-    $('head').append(`<link rel="stylesheet" href="/styles/${cssname}.css" media="screen and (min-width: 992px)">`);
-    $('head').append(`<link rel="stylesheet" href="/styles/${cssname}-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
+    $('head').append(`<link rel="stylesheet" href="/styles/${cssname}.css"><!-- media="screen and (min-width: 992px)"-->`);
+    //$('head').append(`<link rel="stylesheet" href="/styles/${cssname}-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
   }
 }
 
@@ -54,19 +54,79 @@ function showPostContent(postFile){
   });
 }
 
-function listPostsPage(){
+function listPostsPage(now){
   let page=0;
   let postNum=15;
   $.ajax({
     url: '/blog/postlist.txt',
     async: false,
     success: function(data){
-      page = Math.ceil((data.split('\n').length - 1) / postNum);
+      page = Math.ceil((data.split('\n').length) / postNum);
     }
   });
-  listPostsBlock(0,postNum);
-  for (let i=0; i<page; i++) {
-    $('#pagenum').append(`<li onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});">${i+1}</li>`);
+  if(now==undefined){
+    now=0;
+    listPostsBlock(0,postNum);
+  }
+  $('#pagenum').empty();
+  if (page<10){
+    for (let i=0; i<page; i++) {
+      if (i==now){
+        $('#pagenum').append(`<li class="nownum" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+      }else{
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);}
+    }
+  }else if(now<4){
+    for (let i=0; i<7; i++) {
+      if (i==now){
+        $('#pagenum').append(`<li class="nownum" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+      }else{
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);}
+    }
+    $('#pagenum').append(`<li class="ry">......</li>`);
+    for (let i=page-3; i<page; i++) {
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+    }
+  }else if(page-now<5){
+    for (let i=0; i<3; i++) {
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+    }
+    $('#pagenum').append(`<li class="ry">......</li>`);
+    for (let i=page-7; i<page; i++) {
+      if (i==now){
+        $('#pagenum').append(`<li class="nownum" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+      }else{
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);}
+    }
+  }else{
+    for (let i=0; i<2; i++) {
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+    }
+    let left,right;
+    if(now+3==page-2){
+      $('#pagenum').append(`<li class="ry">......</li>`);
+      left=3;
+      right=3;
+    }else if(now-2==2){
+      left=2;
+      right=4;
+    }else{
+      $('#pagenum').append(`<li class="ry">......</li>`);
+      left=2;
+      right=3;
+    }
+    for (let i=now-left; i<now+right; i++) {
+      if (i==now){
+        $('#pagenum').append(`<li class="nownum" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+      }else{
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);}
+    }
+    if(now+3!=page-2){
+      $('#pagenum').append(`<li class="ry">......</li>`);
+    }
+    for (let i=page-2; i<page; i++) {
+      $('#pagenum').append(`<li class="num" onclick="$('#postblock').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
+    }
   }
 }
 
@@ -79,13 +139,24 @@ function listPostsBlock(startNum,endNum){
       fileList = data.split('\n');
     }
   });
+  $.ajax({
+    url: '/blog/pinlist.txt',
+    async: false,
+    success: function(data1){
+      fileList=fileList.concat(data1.split('\n'));
+      console.log(fileList);
+    }
+  });
   if (fileList[0]==''){
     $('#post').prepend(`<p style="text-align: center; font-size: 25px;">目前沒有文章......</p>`);
+  }else if(fileList[startNum]==undefined){
+    $('#postblock').prepend(`<p style="text-align: center; font-size: 25px;">沒有更多文章了......</p>`);
   }
   fileList.reverse();
   for (let i=startNum; i<startNum+endNum && i<fileList.length; i++) {
     let postName=fileList[i];
     let postUrl=`/blog/posts/${postName}`;
+    let pinned=pin(postName);
     $.ajax({
       url: `/blog/posts/${postName}/index.txt`,
       async: false,
@@ -93,8 +164,25 @@ function listPostsBlock(startNum,endNum){
         let content = post.split('\n');
         let time = content[0];
         let posttitle = content[1];
-        $('#postblock').append(`<tr><td class="time enw3">${time} </td><td><a href="${postUrl}" class="posttitle zhw">${posttitle}</a><td></tr>`);
+        $('#postblock').append(`<tr><td class="time enw3">${time} </td><td><span class="posttitle zhw">${pinned}</span><a href="${postUrl}" class="posttitle zhw">${posttitle}</a><td></tr>`);
       }
     });
   }
+}
+
+function pin(title){
+  let pinList = [];
+  $.ajax({
+    url: '/blog/pinlist.txt',
+    async: false,
+    success: function(data){
+      pinList = data.split('\n');
+    }
+  });
+  for(let i=0;i<pinList.length;i++){
+    if (title==pinList[i]){
+      return '📌';
+    }
+  }
+  return '';
 }
