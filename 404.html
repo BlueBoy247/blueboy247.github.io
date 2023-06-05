@@ -6,14 +6,20 @@
     <script>include('404 Not Found')</script>
 </head>
 <body>
-    <header></header>
-    <main style="height: 82vh;background: none;">
+    <main style="height: 90vh;background: none;">
         <div class="pagehead" style="height: 100%;background-image: url(/pictures/404_bg.png);">
-            <p class="pagetitle">
-                <span class="enw1">404 Not Found</span>
+            <p class="pagetitle enw1" style="text-align: center;">
+                404 Not Found<br>
+                <span class="zhwb" style="font-size: 25px;">3秒後自動回到上一頁<br></span>
+                <span style="font-size: 25px;">Automatically go back to the previous page after 3 seconds.</span>
             </p>
         </div>
     </main>
     <footer></footer>
+    <script>
+        setTimeout(function() {
+            history.back(); // 跳转的目标网址
+        }, 3000); // 3000毫秒即3秒
+    </script>
 </body>
 </html>
