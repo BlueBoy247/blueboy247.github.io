@@ -11,40 +11,39 @@
     <main>
         <div class="pagehead">
             <p class="pagetitle">
-                <span class="zhw">聯絡 </span>
-                <span class="enw1">Contact</span>
+                <span class="zhwb">聯絡</span>
             </p>
         </div>
         <div id="form">
             <form method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
                 <ul>
                     <li class="center">
-                        <label for="sender" style="display: flex; align-items: center;">姓名 Name&ensp;<span style="color: red;">*</span></label>
-                        <input type="text" class="text" id="sender" name="sender" placeholder="您的姓名 Your Name" required>
+                        <label class="zhw" for="sender" style="display: flex; align-items: center;">姓名&ensp;<span style="color: red;">*</span></label>
+                        <input type="text" class="text" id="sender" name="sender" placeholder="您的姓名" required>
                     </li>
                     <li class="center">
-                        <label for="email" style="display: flex; align-items: center;">電子信箱 Email&ensp;<span style="color: red;">*</span></label>
-                        <input type="email" class="text" id="email" name="email" placeholder="您的電子信箱 Your E-mail Address" required>
+                        <label class="zhw" for="email" style="display: flex; align-items: center;">電子信箱&ensp;<span style="color: red;">*</span></label>
+                        <input type="email" class="text" id="email" name="email" placeholder="您的電子信箱" required>
                     </li>
                     <li>
-                        <label for="purpose">聯絡目的 Purpose&ensp;<span style="color: red;">*</span></label>
+                        <label class="zhw" for="purpose">聯絡目的&ensp;<span style="color: red;">*</span></label>
                         <div style="display: inline-block;">
-                            <input type="radio" name="type" class="option" id="purpose" value="contact" required checked><span class="optionw">一般聯絡 Normal Contact</span><br>
-                            <input type="radio" name="type" class="option" id="purpose" value="business" required><span class="optionw">商業接洽 Business Contact</span><br>
-                            <input type="radio" name="type" class="option" id="purpose" value="suggest" required><span class="optionw">網站改善建議 Suggestions for website improvement</span>
+                            <input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span><br>
+                            <!--input type="radio" name="type" class="option zhw" id="purpose" value="business" required><span class="optionw">商業接洽</span><br-->
+                            <input type="radio" name="type" class="option zhw" id="purpose" value="suggest" required><span class="optionw">網站改善建議</span>
                         </div>
                     </li>
                         <li>
-                        <label for="content">內容 Content&ensp;<span style="color: red;">*</span></label>
-                        <textarea name="content" id="content" maxlength="6000" placeholder="請輸入訊息 Enter your message" required></textarea>
+                        <label class="zhw" for="content">內容&ensp;<span style="color: red;">*</span></label>
+                        <textarea name="content" id="content" maxlength="6000" placeholder="請輸入訊息" required></textarea>
                     </li>
                 </ul>
-                <div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div>
+                <div id="verify"><div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div></div>
                 <div id="buttonblock">
-                    <button name="submit" type="submit">送出 Submit</button>
-                    <button name="reset" type="reset">重填 Reset</button>
+                    <button class="zhw" name="submit" type="submit">送出</button>
+                    <button class="zhw" name="reset" type="reset">重填</button>
                 </div>
-                <p style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
+                <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
             </form>
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9189513725790874" crossorigin="anonymous"></script>

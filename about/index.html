@@ -3,6 +3,8 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/scripts/include.js"></script>
+    <link rel="preload" href="/scripts/countdownSUBARU.js" as="script">
+    <link rel="preload" href="/scripts/countdownGSAT.js" as="script">
     <script>include('About')</script>
     <link rel="preload" href="/pictures/profile.png" as="image">
 </head>
@@ -11,179 +13,127 @@
     <main>
         <div class="pagehead">
             <p class="pagetitle">
-                <span class="zhw">關於 </span>
+                <span class="zhwb">關於 </span>
                 <span class="enw1">About</span>
             </p>
         </div>
         <div id="aboutme">
             <div class="pagesubtitle" id="profile">
                 <p>
-                    <span class="zhw">個人簡介 </span>
+                    <span class="zhwb">個人簡介 </span>
                     <span class="enw1">My Profile</span>
                 </p>
             </div>
             <div class="content" id="profilec">
-                <p>#未完成......</p>
-                <div style="width: 10%; height: 10%; margin-right: 1%; float: left;">
-                    <img src="/pictures/profile.png" style="width: 100%;" alt="avatar">
-                </div>
-                <div style="width: 89%; height: 10%; float: left;">
-                    <div style="width: fit-content;">
-                        <h3>青鬱 BlueBoy</h3>
-                        <p style="margin-bottom: 0%;">
-                            鼓動の奥  仕舞い込んだ夜から、<wbr>
-                            滲んでいく  明日へ続くメロディー。<br>
-                            胸を  開き  溢れ出してく、<wbr>
-                            私だけの  ストーリー。
-                        </p>
-                        <div style="width: fit-content; height: fit-content; float: right; margin: 0%;">
-                            <a href="https://www.youtube.com/watch?v=a117kgda0sw" target="_blank" style="text-decoration: none; color: #000000; text-align: right; margin: 0%;">
-                                <p>── HACHI〈光の向こうへ〉</p>
-                            </a>
+                <div id="introblock">
+                    <p>#未完成......</p>
+                    <div style="width: 10%; height: 10%; margin-right: 1%; float: left;">
+                        <img src="/pictures/profile.png" style="width: 100%;" alt="avatar">
+                    </div>
+                    <div style="width: 89%; height: 10%; float: left;">
+                        <div style="width: fit-content;">
+                            <h3>青鬱 BlueBoy</h3>
+                            <p style="margin-bottom: 0%;">
+                                鼓動の奥  仕舞い込んだ夜から、<wbr>
+                                滲んでいく  明日へ続くメロディー。<br>
+                                胸を  開き  溢れ出してく、<wbr>
+                                私だけの  ストーリー。
+                            </p>
+                            <div style="width: fit-content; height: fit-content; float: right; margin: 0%;">
+                                <a href="https://www.youtube.com/watch?v=a117kgda0sw" target="_blank" style="text-decoration: none; color: #000000; text-align: right; margin: 0%;">
+                                    <p>── HACHI〈光の向こうへ〉</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div style="width: 100%; float: left;">
-                    <p>簡介 Brief</p>
-                    <blockquote>
-                        <p>
-                            目前就讀於台北市立建國高級中學<br>
-                            I'm now studying in Taipei Municipal Chien Kuo High School                    
-                        </p>
-                        <p>
-                            C/C++初學，正在嘗試用Python開發簡單的小工具，學習建立網頁中，對資安也有興趣<br>
-                        </p>
-                    </blockquote>
-                    <details open style="margin-bottom: 1%;">
-                        <summary>語言能力 Language Ability</summary>
-                        <ul style="list-style-type: none; ">
-                            <li style="margin-bottom: 7px;">
-                                中文(中華民國國語)：母語<br>
-                                Taiwanese Mandarin: Native
-                            </li>
-                            <li style="margin-bottom: 7px;">
-                                英文：中等，尚能溝通，CEFR B1<br>
-                                English: Intermediate (CEFR B1)
-                            </li>
-                            <li style="margin-bottom: 7px;">
-                                日文：JLPT N4<br>
-                                Japanese: JLPT N4
-                            </li>
-                            <li style="margin-bottom: 7px;">
-                                韓文：學習中<br>
-                                Korean: Beginner
-                            </li>
-                            <li style="margin-bottom: 7px;">
-                                德文：學習中<br>
-                                German: Beginner
-                            </li>
-                        </ul>
-                    </details>
-                    <details style="margin-bottom: 1%;">
-                        <summary>喜歡的遊戲 Favorite Games</summary>
-                        <ul style="list-style: none;">
-                            <li style="margin-bottom: 7px;">
-                                プロジェクトセカイ カラフルステージ！ feat. 初音ミク<br>
-                                ID: 237444116602793991
-                            </li>
-                            <li style="margin-bottom: 7px;">
-                                雀魂麻將 Mahjong Soul<br>
-                                ID: 13264912
-                            </li>
-                        </ul>
-                    </details>
+                    <div style="width: 100%; float: left;">
+                        <p>簡介 Brief</p>
+                        <blockquote>
+                            <p>
+                                目前就讀於台北市立建國高級中學<br>
+                                I'm now studying in Taipei Municipal Chien Kuo High School                    
+                            </p>
+                            <p>
+                                C/C++初學，正在嘗試用Python開發簡單的小工具，學習建立網頁中，對資安也有興趣<br>
+                            </p>
+                        </blockquote>
+                        <details open style="margin-bottom: 1%;">
+                            <summary>語言能力 Language Ability</summary>
+                            <ul style="list-style-type: none; ">
+                                <li style="margin-bottom: 7px;">
+                                    中文(中華民國國語)：母語<br>
+                                    Taiwanese Mandarin: Native
+                                </li>
+                                <li style="margin-bottom: 7px;">
+                                    英文：中等，尚能溝通，CEFR B1<br>
+                                    English: Intermediate (CEFR B1)
+                                </li>
+                                <li style="margin-bottom: 7px;">
+                                    日文：JLPT N4<br>
+                                    Japanese: JLPT N4
+                                </li>
+                                <li style="margin-bottom: 7px;">
+                                    韓文：學習中<br>
+                                    Korean: Beginner
+                                </li>
+                                <li style="margin-bottom: 7px;">
+                                    德文：學習中<br>
+                                    German: Beginner
+                                </li>
+                            </ul>
+                        </details>
+                        <details style="margin-bottom: 1%;">
+                            <summary>喜歡的遊戲 Favorite Games</summary>
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: 7px;">
+                                    プロジェクトセカイ カラフルステージ！ feat. 初音ミク<br>
+                                    ID: 237444116602793991
+                                </li>
+                                <li style="margin-bottom: 7px;">
+                                    雀魂麻將 Mahjong Soul<br>
+                                    ID: 13264912
+                                </li>
+                            </ul>
+                        </details>
+                        <a href="./project.html"><p>專案 Projects</p></a>
+                    </div>
                 </div>
             </div>
-            <div class="pagesubtitle" id="project">
+        </div>
+        <div id="countdown">
+            <div class="pagesubtitle">
                 <p>
-                    <span class="zhw">我的專案 </span>
-                    <span class="enw1">My Projects</span>
+                    <span class="zhwb">事件倒數 </span>
+                    <span class="enw1">Countdown</span>
                 </p>
             </div>
-            <div class="content" id="projectc">
-                <a href="https://github.com/BlueBoy247/YouTube-video-downloader" target="_blank">
-                    <div class="problock">
-                        <div class="protitle">
-                            <p class="prozhtitle zhw">YouTube影片下載器 </p>
-                            <p class="proentitle enw2">YouTube Video Downloader</p>
-                        </div>
-                        <div class="proimage">
-                            <img src="/pictures/project_use/YTdownload.png" alt="thumbnail" title="YouTube Video Downloader">
-                        </div>
-                        <div class="procontent">
-                            <p class="probrief">
-                                <span class="zhw">110學年度第2學期自主學習項目<br></span>
-                                <span class="enw2">
-                                    Self-directed Learning project in the second semester of the 110 academic year.
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+            <div class="countdown">
+                <script async src="/scripts/countdownGSAT.js"></script>
+                <a data-type="countdown" data-id="3886391" class="tickcounter" style="display: block; width: 100%;" title="Countdown" href="//www.tickcounter.com/">
+                    Countdown(113GSAT)
                 </a>
-                <a href="https://blueboy247.github.io/" target="_blank">
-                    <div class="problock">
-                        <div class="protitle">
-                            <p class="prozhtitle zhw">我的個人網站</p>
-                            <p class="proentitle enw2">My Personal Website</p>
-                        </div>
-                        <div class="proimage">
-                            <img src="/pictures/project_use/PW.png" alt="thumbnail" title="My Personal Website">
-                        </div>
-                        <div class="procontent">
-                            <p class="probrief">
-                                <span class="zhw">由我自己建置的個人網站，也就是你現在所在的網站<br></span>
-                                <span class="enw2">A website that developed by myself, which is where you are now.</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/" target="_blank" style="display: none;">
-                    <div class="problock">
-                        <div class="protitle">
-                            <p class="prozhtitle zhw">標題</p>
-                            <p class="proentitle enw2">Title</p>
-                        </div>
-                        <div class="proimage">
-                            <img src="/" alt="thumbnail" title="">
-                        </div>
-                        <div class="procontent">
-                            <p class="probrief">
-                                <span class="zhw">中文敘述<br></span>
-                                <span class="enw2">English introduce</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/" target="_blank" style="display: none;">
-                    <div class="problock">
-                        <div class="protitle">
-                            <p class="prozhtitle zhw">標題</p>
-                            <p class="proentitle enw2">Title</p>
-                        </div>
-                        <div class="proimage">
-                            <img src="/" alt="thumbnail" title="">
-                        </div>
-                        <div class="procontent">
-                            <p class="probrief">
-                                <span class="zhw">中文敘述<br></span>
-                                <span class="enw2">English introduce</span>
-                            </p>
-                        </div>
-                    </div>
+            </div>
+            <div class="countdown">
+                <script async src="/scripts/countdownSUBARU.js"></script>
+                <a data-type="countdown" data-id="3885131" class="tickcounter" style="display: block; width: 100%; " title="Countdown" href="//www.tickcounter.com/">
+                    Countdown(oozora_subaru_BD)
                 </a>
             </div>
         </div>
         <div id="aboutsite">
             <div class="pagesubtitle" id="websitet">
                 <p>
-                    <span class="zhw">關於本站 </span>
+                    <span class="zhwb">本站資訊 </span>
                     <span class="enw1">About Website</span>
                 </p>
             </div>
             <div class="content" id="websitec">
-                <p style="text-align: left;">
-                    <a href="/about/site/">>>查看更多</a>
-                </p>
+                <div id="websiteblock">
+                    <p class="zhw" style="text-align: left">
+                        KKK<br>
+                        <a href="./site.html">>>查看更多</a>
+                    </p>
+                </div>
             </div>
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9189513725790874" crossorigin="anonymous"></script>

@@ -63,6 +63,10 @@ textarea::-webkit-input-placeholder{
     font-family: sans-serif;
     font-size: 18px;
 }
+#verify{
+    display: flex;
+    justify-content: center;
+}
 .g-recaptcha{
     margin: 10px 0;
     margin-left: 30px; 
