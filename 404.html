@@ -10,16 +10,29 @@
         <div class="pagehead" style="height: 100%;background-image: url(/pictures/404_bg.png);">
             <p class="pagetitle enw1" style="text-align: center;">
                 404 Not Found<br>
-                <span class="zhwb" style="font-size: 25px;">3秒後自動回到上一頁<br></span>
-                <span style="font-size: 25px;">Automatically go back to the previous page after 3 seconds.</span>
+                <span class="zhwb" style="font-size: 25px;"><span id="countdown">3</span>秒後自動回到上一頁<br></span>
+                <span style="font-size: 25px;">Automatically go back to the previous page after <span id="countdownen">3</span> seconds.</span>
             </p>
         </div>
     </main>
     <footer></footer>
     <script>
-        setTimeout(function() {
-            history.back(); // 跳转的目标网址
-        }, 3000); // 3000毫秒即3秒
+        function countdown() {
+            var seconds = 3;
+            var countdownInterval = setInterval(function() {
+                var countdownElement = document.getElementById('countdown');
+                countdownElement.innerText = seconds;
+                var countdownElement = document.getElementById('countdownen');
+                countdownElement.innerText = seconds;
+                if (seconds === 0) {
+                    clearInterval(countdownInterval);
+                    history.back();
+                }
+                seconds--;
+            }, 1000);
+        }
+
+        countdown();
     </script>
 </body>
 </html>
