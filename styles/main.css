@@ -1,6 +1,8 @@
 *{
-    overflow-x: hidden;
     margin: 0;
+}
+body{
+    width: calc(100vw-7px);
 }
 body::-webkit-scrollbar {
     width: 7px;
@@ -25,12 +27,13 @@ body::-webkit-scrollbar-track {
 }
 /*header*/
 header{
+    width: calc(100%-3vw);
     height: 8vh;
     padding: 0 1.5vw;
     position: sticky;
     top: 0;
     z-index: 9999;
-    background-color: #81D8D0;
+    background-color: #005048;
     overflow: hidden;
 }
 #shead{
@@ -41,7 +44,9 @@ header{
 }
 #shead img{
     justify-content: center;
-    height: 90%; 
+    height: 90%;
+    max-width: 75%;
+    object-fit: contain;
 }
 nav{
     float: right;
@@ -52,7 +57,7 @@ nav{
 .navb{
     display: inline-flex;
     border: 0;
-    color: #2d726b;
+    color: #53a39b;
     text-decoration: none;
     cursor: pointer;
     font-size: 23px;
@@ -71,13 +76,14 @@ nav{
 /*main content*/
 main{
     float: left;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 .pagehead{
     display: flex;
+    width: 100%;
     height: 30vh;
-    padding: 0 0.5vh;
+    padding: 0.5vh 0;
     background-image: url(/pictures/title_bg.png);
     background-size: cover;
     background-position: center;
@@ -106,15 +112,15 @@ main{
     border-radius: 20px;
 }
 .content{
-    padding: 0 2vw;
+    width: calc(100%-26vw);
+    padding: 0 13vw;
     margin-bottom: 40px;
     overflow: hidden;
 }
 /*footer*/
 footer{
-    width: 100vw;
+    width: 100%;
     height: 10vh;
-    padding: 0 0.5vw;
     display: flex;
     flex-direction: row;
     justify-content: center;

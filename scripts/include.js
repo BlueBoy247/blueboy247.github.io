@@ -32,10 +32,13 @@ function include(pagename,en){
     }
     $('head').append(`<script src="/scripts/posting${path}.js"></script>`);
   }
-  if (pagename==='About' || pagename==='Contact' || pagename==='Blog'){
+  if (pagename==='About' || pagename==='Blog'){
     let cssname=pagename.toLowerCase()
     $('head').append(`<link rel="stylesheet" href="/styles/${cssname}.css"><!-- media="screen and (min-width: 992px)"-->`);
     //$('head').append(`<link rel="stylesheet" href="/styles/${cssname}-m.css" media="only screen and (min-width: 0px) and (max-width: 992px)">`);
+  }
+  if (pagename==='Project'){
+    $('head').append(`<link rel="stylesheet" href="/styles/about.css"><!-- media="screen and (min-width: 992px)"-->`);
   }
 }
 

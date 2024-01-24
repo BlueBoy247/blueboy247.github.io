@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/scripts/include.js"></script>
@@ -7,6 +7,7 @@
     <link rel="preload" href="/scripts/countdownGSAT.js" as="script">
     <script>include('About')</script>
     <link rel="preload" href="/pictures/profile.png" as="image">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body bgcolor="#81D8D0">
     <header></header>
@@ -14,125 +15,320 @@
         <div class="pagehead">
             <p class="pagetitle">
                 <span class="zhwb">關於 </span>
-                <span class="enw1">About</span>
             </p>
         </div>
         <div id="aboutme">
             <div class="pagesubtitle" id="profile">
                 <p>
-                    <span class="zhwb">個人簡介 </span>
-                    <span class="enw1">My Profile</span>
+                    <span class="zhwb">個人簡介</span>
                 </p>
             </div>
             <div class="content" id="profilec">
                 <div id="introblock">
-                    <p>#未完成......</p>
-                    <div style="width: 10%; height: 10%; margin-right: 1%; float: left;">
-                        <img src="/pictures/profile.png" style="width: 100%;" alt="avatar">
+                    <h2>Allen Chang</h2>
+                    <hr style="background-color: #2d726b; height: 3px; margin: 1% 0%;">
+                    <h3 id="education">學歷</h3>
+                    <div class="items" style="grid-template-columns: repeat(3,1fr);">
+                        <a class="item" href="https://www.ctjh.ntpc.edu.tw/" target="_blank">
+                            <img src="/pictures/profile_use/education/ctjhphoto.gif">
+                            <div class="title">江翠國中</div>
+                            <div class="description">2018/09~2021/06</div>
+                        </a>
+                        <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
+                            <img src="/pictures/profile_use/education/ck_seal.png">
+                            <div class="title">建國中學</div>
+                            <div class="description">2021/09~2024/06</div>
+                        </a>
+                        <a class="item">
+                            <img src="/pictures/profile_use/no-image-svgrepo-com.svg">
+                            <div class="title">沒有大學</div>
+                        </a>
                     </div>
-                    <div style="width: 89%; height: 10%; float: left;">
-                        <div style="width: fit-content;">
-                            <h3>青鬱 BlueBoy</h3>
-                            <p style="margin-bottom: 0%;">
-                                鼓動の奥  仕舞い込んだ夜から、<wbr>
-                                滲んでいく  明日へ続くメロディー。<br>
-                                胸を  開き  溢れ出してく、<wbr>
-                                私だけの  ストーリー。
-                            </p>
-                            <div style="width: fit-content; height: fit-content; float: right; margin: 0%;">
-                                <a href="https://www.youtube.com/watch?v=a117kgda0sw" target="_blank" style="text-decoration: none; color: #000000; text-align: right; margin: 0%;">
-                                    <p>── HACHI〈光の向こうへ〉</p>
-                                </a>
-                            </div>
+                    <h3 id="experience">經歷</h3>
+                    <div class="items" style="grid-template-columns: repeat(3,1fr);">
+                        <a class="item" href="https://www.instagram.com/infor.35th/" target="_blank">
+                            <img src="/pictures/profile_use/experience/infor35th.jpg">
+                            <div class="title">建中資訊社35th</div>
+                            <div class="description">內務,2023/02~2023/07</div>
+                        </a>
+                    </div>
+                    <h3 id="language">語言</h3>
+                    <div class="items" style="grid-template-columns: repeat(5,1fr);">
+                        <div class="item">
+                            <img src="/pictures/profile_use/language/ROC_Flag.png">
+                            <div class="title">中文</div>
+                            <div class="description">母語</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/language/US_Flag.png">
+                            <div class="title">英文</div>
+                            <div class="description">CEFR B1</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/language/JP_Flag.webp">
+                            <div class="title">日文</div>
+                            <div class="description">JLPT N4</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/language/KR_Flag.webp">
+                            <div class="title">韓文</div>
+                            <div class="description">初學</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/language/Flag_of_Germany.webp">
+                            <div class="title">德語</div>
+                            <div class="description">初學</div>
                         </div>
                     </div>
-                    <div style="width: 100%; float: left;">
-                        <p>簡介 Brief</p>
-                        <blockquote>
-                            <p>
-                                目前就讀於台北市立建國高級中學<br>
-                                I'm now studying in Taipei Municipal Chien Kuo High School                    
-                            </p>
-                            <p>
-                                C/C++初學，正在嘗試用Python開發簡單的小工具，學習建立網頁中，對資安也有興趣<br>
-                            </p>
-                        </blockquote>
-                        <details open style="margin-bottom: 1%;">
-                            <summary>語言能力 Language Ability</summary>
-                            <ul style="list-style-type: none; ">
-                                <li style="margin-bottom: 7px;">
-                                    中文(中華民國國語)：母語<br>
-                                    Taiwanese Mandarin: Native
+                    <h3 id="skill">技能</h3>
+                    <div class="items" style="grid-template-columns: repeat(4,1fr);">
+                        <div class="item">
+                            <img src="/pictures/profile_use/skill/python_icon.png">
+                            <div class="title">Python 3</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/skill/html5.png">
+                            <div class="title">HTML 5</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/skill/CSS3_logo_and_wordmark.png">
+                            <div class="title">CSS 3</div>
+                        </div>
+                        <div class="item">
+                            <img src="/pictures/profile_use/skill/Javascript-shield.svg">
+                            <div class="title">JavaScript</div>
+                        </div>
+                    </div>
+                    <h3 id="programming">競程相關</h3>
+                    <div class="items" style="grid-template-columns: repeat(4,1fr);">
+                        <a class="item" href="https://zerojudge.tw/UserStatistic?id=185068" target="_blank">
+                            <img src="/pictures/profile_use/programming/ZeroJudge_icon.svg">
+                        </a>
+                        <a class="item" href="https://tioj.ck.tp.edu.tw/users/allen247" target="_blank">
+                            <img src="/pictures/profile_use/programming/TIOJ_banner.png" style="width: 80%;">
+                        </a>
+                        <a class="item" href="https://codeforces.com/profile/shuba247" target="_blank">
+                            <img src="/pictures/profile_use/programming/codeforces-sponsored-by-ton.png" style="width: 80%;">
+                        </a>
+                        <a class="item" href="https://atcoder.jp/users/Shuba247" target="_blank">
+                            <img src="/pictures/profile_use/programming/atcoder_logo.svg">
+                        </a>
+                    </div>
+                    <h3 id="project">專案</h3>
+                    <div class="items" style="grid-template-columns: 2.5fr 2.5fr 0.5fr">
+                        <a class="item" href="https://github.com/BlueBoy247/YouTube-video-downloader" target="_blank">
+                            <img src="/pictures/project_use/YTdownload.png">
+                            <div class="title">YouTube影片下載器</div>
+                        </a>
+                        <a class="item" href="/" target="_blank">
+                            <img src="/pictures/project_use/EventCountdownDCBot.png">
+                            <div class="title">事件倒數Discord Bot</div>
+                        </a>
+                        <a class="item" href="./project.html">更多</a>
+                    </div>
+                    <div class="items" id="more" style="grid-template-columns: repeat(1,1fr);">
+                        <div class="item">顯示更多</div>
+                    </div>
+                    <div id="hidden">
+                        <h3 id="game">喜歡的遊戲</h3>
+                        <div class="items" style="grid-template-columns: repeat(5,1fr);">
+                            <a class="item" href="https://bluearchive.nexon.com/home" target="_blank">
+                                <img src="/pictures/profile_use/game/Blue_Archive_icon.png">
+                                <div class="title">蔚藍檔案</div>
+                            </a>
+                            <a class="item" href="https://pjsekai.sega.jp/" target="_blank">
+                                <img src="/pictures/profile_use/game/Pj_Sekai_app.png">
+                                <div class="title">プロジェクトセカイ カラフルステージ！ feat. 初音ミク</div>
+                            </a>
+                            <a class="item" href="https://bang-dream.bushimo.jp/" target="_blank">
+                                <img src="/pictures/profile_use/game/Band_dream_app.png">
+                                <div class="title">バンドリ！ガールズバンドパーティ！</div>
+                            </a>
+                            <a class="item" href="https://www.rotaeno.com/" target="_blank">
+                                <img src="/pictures/profile_use/game/Rotaeno_icon.jpg">
+                                <div class="title">Rotaeno</div>
+                            </a>
+                            <a class="item" href="https://twitter.com/Phigros_PGS" target="_blank">
+                                <img src="/pictures/profile_use/game/Phigros_logo.png">
+                                <div class="title">Phigros</div>
+                            </a>
+                        </div>
+                        <h3 id="vtuber">喜歡的VTuber</h3>
+                        <div class="items" style="grid-template-columns: repeat(5,1fr);">
+                            <a class="item" href="https://www.youtube.com/@OozoraSubaru" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/oozora_subaru.jpg">
+                                <div class="title">大空スバル</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@GawrGura" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/gawr_gura.jpg">
+                                <div class="title">Gawr Gura</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@TokinoSora" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/tokino_sora.jpg">
+                                <div class="title">ときのそら</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@AZKi" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/azki.jpg">
+                                <div class="title">AZKi</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@HoshimachiSuisei" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/hoshimachi_suisei.jpg">
+                                <div class="title">星街すいせい</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@petragurin" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/petra_gurin.jpg">
+                                <div class="title">Petra Gurin</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@HoshikawaSara" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/hoshikawa_sara.jpg">
+                                <div class="title">星川サラ</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@HACHIVSinger" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/hachi.jpg">
+                                <div class="title">HACHI</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@Nachoneko_dayo" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/nachoneko.jpg">
+                                <div class="title">甘城なつき</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/@ui_shig" target="_blank">
+                                <img src="/pictures/profile_use/vtuber/shigure_ui.jpg">
+                                <div class="title">しぐれうい</div>
+                            </a>
+                        </div>
+                        <h3 id="songs">喜歡的歌</h3>
+                        <div class="items" style="grid-template-columns: repeat(4,1fr);">
+                            <a class="item" href="https://www.youtube.com/watch?v=9lVPAWLWtWc" target="_blank">
+                                <img src="/pictures/profile_use/songs/ghost_in_a_flower.jpg">
+                                <div class="title">花に亡霊</div>
+                                <div class="description">ヨルシカ</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/watch?v=riy_xiT_y84" target="_blank">
+                                <img src="/pictures/profile_use/songs/starlight.jpg">
+                                <div class="title">スターライト</div>
+                                <div class="description">大空スバル</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/watch?v=a117kgda0sw" target="_blank">
+                                <img src="/pictures/profile_use/songs/hikarinomukoue.jpg">
+                                <div class="title">光の向こうへ</div>
+                                <div class="description">HACHI</div>
+                            </a>
+                            <a class="item" href="https://www.youtube.com/watch?v=oZpYEEcvu5I" target="_blank">
+                                <img src="/pictures/profile_use/songs/bansanka.jpg">
+                                <div class="title">晩餐歌</div>
+                                <div class="description">tuki.</div>
+                            </a>
+                        </div>
+                        <h3>倒數計時</h3>
+                        <div class="countdown">
+                            <script async src="/scripts/countdownSUBARU.js"></script>
+                            <a data-type="countdown" data-id="3885131" class="tickcounter" style="display: block; width: 100%; " title="Countdown" href="//www.tickcounter.com/">
+                                Countdown(oozora_subaru_BD)
+                            </a>
+                        </div>
+                    </div>
+                    <div class="items" id="less" style="grid-template-columns: repeat(1,1fr);">
+                        <div class="item">顯示較少</div>
+                    </div>
+                    <hr style="background-color: #2d726b; height: 3px; margin: 3% 0%;">
+                    <h3>聯絡表單</h3>
+                    <div id="form">
+                        <form method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
+                            <ul style="padding-inline-start: 0px;">
+                                <li class="center">
+                                    <label class="zhw label" for="sender" style="display: flex; align-items: center;">姓名&ensp;<span style="color: red;">*</span></label>
+                                    
                                 </li>
-                                <li style="margin-bottom: 7px;">
-                                    英文：中等，尚能溝通，CEFR B1<br>
-                                    English: Intermediate (CEFR B1)
+                                <li>
+                                    <input type="text" class="text" id="sender" name="sender" placeholder="您的姓名" required>
                                 </li>
-                                <li style="margin-bottom: 7px;">
-                                    日文：JLPT N4<br>
-                                    Japanese: JLPT N4
+                                <li class="center">
+                                    <label class="zhw label" for="email" style="display: flex; align-items: center;">電子信箱&ensp;<span style="color: red;">*</span></label>
                                 </li>
-                                <li style="margin-bottom: 7px;">
-                                    韓文：學習中<br>
-                                    Korean: Beginner
+                                <li>
+                                    <input type="email" class="text" id="email" name="email" placeholder="您的電子信箱" required>
                                 </li>
-                                <li style="margin-bottom: 7px;">
-                                    德文：學習中<br>
-                                    German: Beginner
+                                <li>
+                                    <label class="zhw label" for="purpose">聯絡目的&ensp;<span style="color: red;">*</span></label>
+                                </li>
+                                <li>
+                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span></label>
+                                    <!--label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="business" required><span class="optionw">商業接洽</span></label-->
+                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="suggest" required><span class="optionw">網站改善建議</span></label>
+                                </li>
+                                <li>
+                                    <label class="zhw label" for="content">內容&ensp;<span style="color: red;">*</span></label>
+                                </li>
+                                <li>
+                                    <textarea name="content" id="content" maxlength="6000" placeholder="請輸入訊息" required></textarea>
                                 </li>
                             </ul>
-                        </details>
-                        <details style="margin-bottom: 1%;">
-                            <summary>喜歡的遊戲 Favorite Games</summary>
-                            <ul style="list-style: none;">
-                                <li style="margin-bottom: 7px;">
-                                    プロジェクトセカイ カラフルステージ！ feat. 初音ミク<br>
-                                    ID: 237444116602793991
-                                </li>
-                                <li style="margin-bottom: 7px;">
-                                    雀魂麻將 Mahjong Soul<br>
-                                    ID: 13264912
-                                </li>
-                            </ul>
-                        </details>
-                        <a href="./project.html"><p>專案 Projects</p></a>
+                            <div id="verify"><div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div></div>
+                            <div id="buttonblock">
+                                <button class="zhw" name="submit" type="submit">送出</button>
+                                <button class="zhw" name="reset" type="reset">重填</button>
+                            </div>
+                            <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="countdown">
-            <div class="pagesubtitle">
-                <p>
-                    <span class="zhwb">事件倒數 </span>
-                    <span class="enw1">Countdown</span>
-                </p>
-            </div>
-            <div class="countdown">
-                <script async src="/scripts/countdownGSAT.js"></script>
-                <a data-type="countdown" data-id="3886391" class="tickcounter" style="display: block; width: 100%;" title="Countdown" href="//www.tickcounter.com/">
-                    Countdown(113GSAT)
-                </a>
-            </div>
-            <div class="countdown">
-                <script async src="/scripts/countdownSUBARU.js"></script>
-                <a data-type="countdown" data-id="3885131" class="tickcounter" style="display: block; width: 100%; " title="Countdown" href="//www.tickcounter.com/">
-                    Countdown(oozora_subaru_BD)
-                </a>
             </div>
         </div>
         <div id="aboutsite">
             <div class="pagesubtitle" id="websitet">
                 <p>
-                    <span class="zhwb">本站資訊 </span>
-                    <span class="enw1">About Website</span>
+                    <span class="zhwb">網站建置記事</span>
                 </p>
             </div>
             <div class="content" id="websitec">
                 <div id="websiteblock">
-                    <p class="zhw" style="text-align: left">
-                        KKK<br>
-                        <a href="./site.html">>>查看更多</a>
-                    </p>
+                    <table id="webtime">
+                        <tr>
+                            <td class="time enw3">2023-06-05</td>
+                            <td class="tag zhw">#全站</td>
+                            <td class="event zhw">英文版頁面上線</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-04-28</td>
+                            <td class="tag zhw">#記事</td>
+                            <td class="event zhw">完成文章發布之JavaScript撰寫</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-03-29</td>
+                            <td class="tag zhw">#關於</td>
+                            <td class="event zhw">聯絡表單建置完成</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-03-26</td>
+                            <td class="tag zhw">#全站</td>
+                            <td class="event zhw">完成網站第二版CSS設計，正式版網站上線</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-03-25</td>
+                            <td class="tag zhw">#全站</td>
+                            <td class="event zhw">網站更名為 "BlueBoy's Space"</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-02-28</td>
+                            <td class="tag zhw">#全站</td>
+                            <td class="event zhw">完成網站第一版CSS設計</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-02-19</td>
+                            <td class="tag zhw">#全站</td>
+                            <td class="event zhw"><a href="https://blueboy247.github.io/website_old_ver/" target="_blank">測試版網站</a>上線，網站名為 "Allen Chang's Website"</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-02-18</td>
+                            <td class="tag zhw">#建置</td>
+                            <td class="event zhw">完成網站HTML撰寫</td>
+                        </tr>
+                        <tr>
+                            <td class="time enw3">2023-02-13</td>
+                            <td class="tag zhw">#建置</td>
+                            <td class="event zhw">完成網站架構之規劃</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -144,5 +340,32 @@
         </script>
     </main>
     <footer></footer>
+    <script>
+        var textarea = document.querySelector('textarea');
+
+        textarea.addEventListener('input', (e) => {
+            textarea.style.height = '100px';
+            textarea.style.height = e.target.scrollHeight + 'px';
+        });
+    </script>
+    <script>
+        var button1=document.getElementById('more');
+        var button2=document.getElementById('less');
+        var div=document.getElementById('hidden');
+
+        function more(){
+            button1.style.display='none';
+            button2.style.display='grid';
+            div.style.display='block';
+        }
+        function less(){
+            button1.style.display='grid';
+            button2.style.display='none';
+            div.style.display='none';
+        }
+
+        button1.addEventListener('click', more);
+        button2.addEventListener('click', less);
+    </script>
 </body>
 </html>

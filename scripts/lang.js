@@ -13,7 +13,7 @@ function language(lang){
         id.setAttribute('title',"語言：中文");
         id.setAttribute('onclick',"language('zh');");
         id=document.getElementById('siteinfobt');
-        id.href="/en/about/site.html";
+        id.href="/en/about/#aboutsite";
         id.setAttribute('title',"About Site");
         id=document.getElementById('in-link-button');
         id.setAttribute('style',"display: none;");
@@ -25,7 +25,7 @@ function language(lang){
         id.setAttribute('title',"Language: English");
         id.setAttribute('onclick',"language('en');");
         id=document.getElementById('siteinfobt');
-        id.href="/about/site.html";
+        id.href="/about/#aboutsite";
         id.setAttribute('title',"本站資訊");
         id=document.getElementById('in-link-button');
         id.setAttribute('style',"display: block;");
