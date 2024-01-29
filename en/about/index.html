@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="en">
 <head>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/scripts/include.js"></script>
     <link rel="preload" href="/scripts/countdownSUBARU.js" as="script">
     <link rel="preload" href="/scripts/countdownGSAT.js" as="script">
-    <script>include('About')</script>
+    <script>include('About',true)</script>
     <link rel="preload" href="/pictures/profile.png" as="image">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -14,68 +14,69 @@
     <main>
         <div class="pagehead">
             <p class="pagetitle">
-                <span class="zhwb">關於 </span>
+                <span class="enw1">About</span>
             </p>
         </div>
         <div id="aboutme">
             <div class="pagesubtitle" id="profile">
                 <p>
-                    <span class="zhwb">個人簡介</span>
+                    <span class="enw1">My Profile</span>
                 </p>
             </div>
             <div class="content" id="profilec">
                 <div id="introblock">
                     <h2>Allen Chang</h2>
                     <hr style="background-color: #2d726b; height: 3px; margin: 1% 0%;">
-                    <h3 id="education">學歷</h3>
+                    <h3 id="education">Education</h3>
                     <div class="items" style="grid-template-columns: repeat(3,1fr);">
-                        <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
+                        <a class="item" href="https://www.ck.tp.edu.tw/nss/p/ckweben" target="_blank">
                             <img src="/pictures/profile_use/education/ck_seal.png">
-                            <div class="title">建國中學</div>
+                            <div class="title">Chien Kuo High School</div>
                             <div class="description">2021/09~2024/06</div>
                         </a>
                         <a class="item">
                             <img src="/pictures/profile_use/no-image-svgrepo-com.svg">
-                            <div class="title">沒有大學</div>
+                            <div class="title">No University</div>
                         </a>
                     </div>
-                    <h3 id="experience">經歷</h3>
+                    <h3 id="experience">Experiences</h3>
                     <div class="items" style="grid-template-columns: repeat(3,1fr);">
                         <a class="item" href="https://www.instagram.com/infor.35th/" target="_blank">
                             <img src="/pictures/profile_use/experience/infor35th.jpg">
-                            <div class="title">建中資訊社35th</div>
-                            <div class="description">內務,2023/02~2023/07</div>
+                            <div class="title">INFOR 35th</div>
+                            <div class="description">Officer of <wbr>Intra-Association Affair Department</div>
+                            <div class="description">2023/02~2023/07</div>
                         </a>
                     </div>
-                    <h3 id="language">語言</h3>
+                    <h3 id="language">Languages</h3>
                     <div class="items" style="grid-template-columns: repeat(5,1fr);">
                         <div class="item">
                             <img src="/pictures/profile_use/language/ROC_Flag.png">
-                            <div class="title">中文</div>
-                            <div class="description">母語</div>
+                            <div class="title">Chinese</div>
+                            <div class="description">Native Tongue</div>
                         </div>
                         <div class="item">
                             <img src="/pictures/profile_use/language/US_Flag.png">
-                            <div class="title">英文</div>
+                            <div class="title">English</div>
                             <div class="description">CEFR B1</div>
                         </div>
                         <div class="item">
                             <img src="/pictures/profile_use/language/JP_Flag.webp">
-                            <div class="title">日文</div>
+                            <div class="title">Japanese</div>
                             <div class="description">JLPT N4</div>
                         </div>
                         <div class="item">
                             <img src="/pictures/profile_use/language/KR_Flag.webp">
-                            <div class="title">韓文</div>
-                            <div class="description">初學</div>
+                            <div class="title">Korean</div>
+                            <div class="description">Beginner</div>
                         </div>
                         <div class="item">
                             <img src="/pictures/profile_use/language/Flag_of_Germany.webp">
-                            <div class="title">德語</div>
-                            <div class="description">初學</div>
+                            <div class="title">German</div>
+                            <div class="description">Beginner</div>
                         </div>
                     </div>
-                    <h3 id="skill">技能</h3>
+                    <h3 id="skill">Skills</h3>
                     <div class="items" style="grid-template-columns: repeat(4,1fr);">
                         <div class="item">
                             <img src="/pictures/profile_use/skill/python_icon.png">
@@ -94,7 +95,7 @@
                             <div class="title">JavaScript</div>
                         </div>
                     </div>
-                    <h3 id="programming">競程相關</h3>
+                    <h3 id="programming">Competitive Programming</h3>
                     <div class="items" style="grid-template-columns: repeat(4,1fr);">
                         <a class="item" href="https://zerojudge.tw/UserStatistic?id=185068" target="_blank">
                             <img src="/pictures/profile_use/programming/ZeroJudge_icon.svg">
@@ -109,27 +110,27 @@
                             <img src="/pictures/profile_use/programming/atcoder_logo.svg">
                         </a>
                     </div>
-                    <h3 id="project">專案</h3>
+                    <h3 id="project">Projects</h3>
                     <div class="items" style="grid-template-columns: 2.5fr 2.5fr 0.5fr">
                         <a class="item" href="https://github.com/BlueBoy247/YouTube-video-downloader" target="_blank">
                             <img src="/pictures/project_use/YTdownload.png">
-                            <div class="title">YouTube影片下載器</div>
+                            <div class="title">YouTube Video Downloader</div>
                         </a>
                         <a class="item" href="/" target="_blank">
                             <img src="/pictures/project_use/EventCountdownDCBot.png">
-                            <div class="title">事件倒數Discord Bot</div>
+                            <div class="title">Event Countdown Discord Bot</div>
                         </a>
-                        <a class="item" href="./project.html">更多</a>
+                        <a class="item" href="./about/project.html">And more</a>
                     </div>
                     <div class="items" id="more" style="grid-template-columns: repeat(1,1fr);">
-                        <div class="item">顯示更多</div>
+                        <div class="item">view more</div>
                     </div>
                     <div id="hidden">
-                        <h3 id="game">喜歡的遊戲</h3>
+                        <h3 id="game">Favorite Games</h3>
                         <div class="items" style="grid-template-columns: repeat(5,1fr);">
                             <a class="item" href="https://bluearchive.nexon.com/home" target="_blank">
                                 <img src="/pictures/profile_use/game/Blue_Archive_icon.png">
-                                <div class="title">蔚藍檔案</div>
+                                <div class="title">Blue Archive</div>
                             </a>
                             <a class="item" href="https://pjsekai.sega.jp/" target="_blank">
                                 <img src="/pictures/profile_use/game/Pj_Sekai_app.png">
@@ -148,7 +149,7 @@
                                 <div class="title">Phigros</div>
                             </a>
                         </div>
-                        <h3 id="vtuber">喜歡的VTuber</h3>
+                        <h3 id="vtuber">Favorite VTubers</h3>
                         <div class="items" style="grid-template-columns: repeat(5,1fr);">
                             <a class="item" href="https://www.youtube.com/@OozoraSubaru" target="_blank">
                                 <img src="/pictures/profile_use/vtuber/oozora_subaru.jpg">
@@ -191,7 +192,7 @@
                                 <div class="title">しぐれうい</div>
                             </a>
                         </div>
-                        <h3 id="songs">喜歡的歌</h3>
+                        <h3 id="songs">Favorite Songs</h3>
                         <div class="items" style="grid-template-columns: repeat(4,1fr);">
                             <a class="item" href="https://www.youtube.com/watch?v=9lVPAWLWtWc" target="_blank">
                                 <img src="/pictures/profile_use/songs/ghost_in_a_flower.jpg">
@@ -214,7 +215,7 @@
                                 <div class="description">tuki.</div>
                             </a>
                         </div>
-                        <h3>倒數計時</h3>
+                        <h3>Countdown</h3>
                         <div class="countdown">
                             <script async src="/scripts/countdownSUBARU.js"></script>
                             <a data-type="countdown" data-id="3885131" class="tickcounter" style="display: block; width: 100%; " title="Countdown" href="//www.tickcounter.com/">
@@ -223,45 +224,44 @@
                         </div>
                     </div>
                     <div class="items" id="less" style="grid-template-columns: repeat(1,1fr);">
-                        <div class="item">顯示較少</div>
+                        <div class="item">view less</div>
                     </div>
                     <hr style="background-color: #2d726b; height: 3px; margin: 3% 0%;">
-                    <h3>聯絡表單</h3>
+                    <h3>Contact</h3>
                     <div id="form">
                         <form method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
                             <ul style="padding-inline-start: 0px;">
                                 <li class="center">
-                                    <label class="zhw label" for="sender" style="display: flex; align-items: center;">姓名&ensp;<span style="color: red;">*</span></label>
-                                    
+                                    <label class="enw2 label" for="sender" style="display: flex; align-items: center;">Name&ensp;<span style="color: red;">*</span></label>
                                 </li>
                                 <li>
-                                    <input type="text" class="text" id="sender" name="sender" placeholder="您的姓名" required>
+                                    <input type="text" class="text" id="sender" name="sender" placeholder="Your Name" required>
                                 </li>
                                 <li class="center">
-                                    <label class="zhw label" for="email" style="display: flex; align-items: center;">電子信箱&ensp;<span style="color: red;">*</span></label>
+                                    <label class="enw2 label" for="email" style="display: flex; align-items: center;">Email&ensp;<span style="color: red;">*</span></label>
                                 </li>
                                 <li>
-                                    <input type="email" class="text" id="email" name="email" placeholder="您的電子信箱" required>
+                                    <input type="email" class="text" id="email" name="email" placeholder="Your E-mail Address" required>
                                 </li>
                                 <li>
-                                    <label class="zhw label" for="purpose">聯絡目的&ensp;<span style="color: red;">*</span></label>
+                                    <label class="enw2 label" for="purpose">Purpose&ensp;<span style="color: red;">*</span></label>
                                 </li>
                                 <li>
-                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span></label>
+                                    <label class="enw2"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">General Contact</span></label>
                                     <!--label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="business" required><span class="optionw">商業接洽</span></label-->
-                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="suggest" required><span class="optionw">網站改善建議</span></label>
+                                    <label class="enw2"><input type="radio" name="type" class="option zhw" id="purpose" value="suggest" required><span class="optionw">Suggestions for website</span></label>
                                 </li>
                                 <li>
-                                    <label class="zhw label" for="content">內容&ensp;<span style="color: red;">*</span></label>
+                                    <label class="enw2 label" for="content">Content&ensp;<span style="color: red;">*</span></label>
                                 </li>
                                 <li>
-                                    <textarea name="content" id="content" maxlength="6000" placeholder="請輸入訊息" required></textarea>
+                                    <textarea name="content" id="content" maxlength="6000" placeholder="Enter your message" required></textarea>
                                 </li>
                             </ul>
                             <div id="verify"><div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div></div>
                             <div id="buttonblock">
-                                <button class="zhw" name="submit" type="submit">送出</button>
-                                <button class="zhw" name="reset" type="reset">重填</button>
+                                <button class="enw2" name="submit" type="submit">Submit</button>
+                                <button class="enw2" name="reset" type="reset">Reset</button>
                             </div>
                             <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
                         </form>
@@ -272,7 +272,7 @@
         <div id="aboutsite">
             <div class="pagesubtitle" id="websitet">
                 <p>
-                    <span class="zhwb">網站建置記事</span>
+                    <span class="enw1">Website Development Notes</span>
                 </p>
             </div>
             <div class="content" id="websitec">
@@ -280,48 +280,48 @@
                     <table id="webtime">
                         <tr>
                             <td class="time enw3">2023-06-05</td>
-                            <td class="tag zhw">#全站</td>
-                            <td class="event zhw">英文版頁面上線</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Published English version of the website</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-04-28</td>
-                            <td class="tag zhw">#記事</td>
-                            <td class="event zhw">完成文章發布之JavaScript撰寫</td>
+                            <td class="tag zhw">#Blog</td>
+                            <td class="event zhw">Completed JavaScript code for posting articles</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-03-29</td>
-                            <td class="tag zhw">#關於</td>
-                            <td class="event zhw">聯絡表單建置完成</td>
+                            <td class="tag zhw">#About</td>
+                            <td class="event zhw">Completed setup of the contact form</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-03-26</td>
-                            <td class="tag zhw">#全站</td>
-                            <td class="event zhw">完成網站第二版CSS設計，正式版網站上線</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Completed second version CSS design for the website and officially published the website</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-03-25</td>
-                            <td class="tag zhw">#全站</td>
-                            <td class="event zhw">網站更名為 "BlueBoy's Space"</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Website renamed to "BlueBoy's Space"</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-02-28</td>
-                            <td class="tag zhw">#全站</td>
-                            <td class="event zhw">完成網站第一版CSS設計</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Completed first version CSS design for the website</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-02-19</td>
-                            <td class="tag zhw">#全站</td>
-                            <td class="event zhw"><a href="https://blueboy247.github.io/website_old_ver/" target="_blank">測試版網站</a>上線，網站名為 "Allen Chang's Website"</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Published <a href="https://blueboy247.github.io/website_old_ver/" target="_blank">test website</a> (via GitHub Pages) named "Allen Chang's Website"</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-02-18</td>
-                            <td class="tag zhw">#建置</td>
-                            <td class="event zhw">完成網站HTML撰寫</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Completed HTML code for the website</td>
                         </tr>
                         <tr>
                             <td class="time enw3">2023-02-13</td>
-                            <td class="tag zhw">#建置</td>
-                            <td class="event zhw">完成網站架構之規劃</td>
+                            <td class="tag zhw">#Setup</td>
+                            <td class="event zhw">Completed planning for the website architecture</td>
                         </tr>
                     </table>
                 </div>
