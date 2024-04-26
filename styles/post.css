@@ -1,26 +1,35 @@
 #postdetail{
-    margin: 1% 2%;
-    display: inline-flex;
-    align-items: end;
+    margin: 1% 5vw 0 5vw;
+}
+#backdiv{
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: 5vw;
+}
+#backdiv span{
+    font-size: 25px;
+}
+#backdiv:hover{
+    color: #999999;
 }
 #back{
     overflow: hidden;
-    font-size: 40px;
 }
-#back a{
-    color: #2d726b;
+@media only screen and (max-width: 768px){
+    #backdiv{
+        display: none;
+    }
 }
-#back a:hover{
-    color: #46ada3;
-}
-#posttitle{
+#postdetail #posttime{
     font-size: 30px;
-    padding-left: 15px;
+    padding-left: 2%;
 }
-#posttime{
+#postdetail #posttitle{
     font-size: 30px;
-    padding-right: 15px;
-    border-right: solid 4px #2d726b;
+    padding-left: 2%;
 }
 #postdiv{
     width: 100%;

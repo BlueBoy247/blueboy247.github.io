@@ -1,22 +1,47 @@
 #postblock{
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
+}
+#postblock caption{
+    display: none;
 }
 #postblock tr{
     height: 75px;
     border-bottom: solid 5px #2d726b;
 }
 #postblock .time{
-    width: 200px;
+    width: 18%;
     text-align: center;
-    padding: 0 30px;
+    padding-left: 1%;
     font-size: 25px;
 }
 #postblock .posttitle{
-    width: calc(100%-200px);
+    padding-right: 1%;
     font-size: 25px;
+}
+#postblock .posttitle a{
     color: black;
+}
+@media only screen and (max-width: 1024px){
+    #postblock{
+        margin: 0 4%;
+        width: 92%;
+    }
+    #postblock #tabletitle{
+        display: none;
+    }
+    #postblock .time{
+        display: table-row;
+        width: auto;
+        text-align: left;
+    }
+    #postblock .posttitle{
+        display: table-row;
+    }
+}
+.nopost{
+    text-align: center;
+    font-size: 25px;
 }
 #pagenum{
     display: flex;
