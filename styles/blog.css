@@ -22,23 +22,6 @@
 #postblock .posttitle a{
     color: black;
 }
-@media only screen and (max-width: 1024px){
-    #postblock{
-        margin: 0 4%;
-        width: 92%;
-    }
-    #postblock #tabletitle{
-        display: none;
-    }
-    #postblock .time{
-        display: table-row;
-        width: auto;
-        text-align: left;
-    }
-    #postblock .posttitle{
-        display: table-row;
-    }
-}
 .nopost{
     text-align: center;
     font-size: 25px;
@@ -49,7 +32,7 @@
     align-items: center;
     margin: 20px auto;
     padding-inline-start: 0px;
-    width: 60%;
+    width: 100%;
     list-style-type: none;
 }
 #pagenum .num{
@@ -76,6 +59,33 @@
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
-#pagenum .ry{
-    font-size: 20px;
+@media only screen and (max-width: 1024px){
+    #postblock{
+        margin: 0 4%;
+        width: 92%;
+    }
+    #postblock #tabletitle{
+        display: none;
+    }
+    #postblock tr{
+        height: fit-content;
+    }
+    #postblock .time{
+        display: table-row;
+        width: auto;
+        text-align: left;
+        font-size: 20px;
+    }
+    #postblock .posttitle{
+        display: table-row;
+        font-size: 20px;
+    }
+    #pagenum .num{
+        font-size: 15px;
+        width: 30px;
+    }
+    #pagenum .nownum{
+        font-size: 15px;
+        width: 30px;
+    }
 }
