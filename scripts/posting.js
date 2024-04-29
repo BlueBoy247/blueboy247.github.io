@@ -15,19 +15,24 @@ function listPostsPage(now){
   $('#pagenum').empty();
   if(page==0){
     return;
-  }else if (page<=5){
-    for (let i=0; i<page; i++) {
-      if (i==now){
-        $('#pagenum').append(`<li class="nownum" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
-      }else{
-      $('#pagenum').append(`<li class="num" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);}
-    }
+  }else if (now+1<=3){
+    listPageNum(0,5,now,postNum,page);
+  }else if(now+1>=page-2){
+    listPageNum(page-5,page,now,postNum,page);
   }else{
-    for (let i=now-2; i<=now+2; i++) {
-      if (i==now){
-        $('#pagenum').append(`<li class="nownum" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);
-      }else{
-      $('#pagenum').append(`<li class="num" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${postNum});listPostsPage(${i});">${i+1}</li>`);}
+    listPageNum(now-2,now+3,now,postNum,page);
+  }
+}
+
+function listPageNum(start,end,now,postNum,page){
+  for (let i=start; i<end; i++) {
+    if(i<0 || i>=page){
+      continue;
+    }
+    if (i==now){
+      $('#pagenum').append(`<li class="nownum" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${(i+1)*postNum});listPostsPage(${i});">${i+1}</li>`);
+    }else{
+      $('#pagenum').append(`<li class="num" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${(i+1)*postNum});listPostsPage(${i});">${i+1}</li>`);
     }
   }
 }
@@ -45,12 +50,15 @@ function listPostsBlock(startNum,endNum){
     $('.content').prepend(`<p class="nopost">目前沒有記事......</p>`);
     $(`#postblock`).css("display","none");
     $(`#pagenum`).css("display","none");
+    return;
   }else if(fileList[startNum]==undefined){
     $('.content').prepend(`<p class="nopost">沒有更多記事了......</p>`);
     $(`#postblock`).css("display","none");
+    return;
   }
+  $(`#postblock`).css("display","table");
   fileList.reverse();
-  for (let i=startNum; i<startNum+endNum && i<fileList.length; i++) {
+  for (let i=startNum; i<endNum && i<fileList.length; i++) {
     let postData=fileList[i].split(' ');
     let postPath=postData[0];
     let postUrl=`/blog/posts/${postPath}`;
