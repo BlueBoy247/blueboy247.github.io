@@ -10,7 +10,7 @@
     display: grid;
     gap: 7px;
     margin: 1%;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(8,1fr);
 }
 @media only screen and (max-width: 425px){
     .items{
@@ -25,7 +25,7 @@
         grid-template-columns: repeat(2,1fr);
     }
     .smallitems{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
 }
 .item{
@@ -44,8 +44,13 @@
 .item:hover{
     background-color: #46ada3;
 }
-.item img{
+.items .item img{
     width: 100%;
+    margin-bottom: 3%;
+    object-fit: cover;
+}
+.smallitems .item img{
+    width: 96px;
     margin-bottom: 3%;
     object-fit: cover;
 }
