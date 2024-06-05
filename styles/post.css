@@ -39,3 +39,9 @@
         padding-left: 2%;
     }
 }
+.content *{
+    max-width: 100%;
+}
+picture{
+    display: block;
+}
