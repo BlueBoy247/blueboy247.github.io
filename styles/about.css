@@ -245,16 +245,21 @@ button:active{
     height: fit-content;
     padding-bottom: 5%;
     display: grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap: 15px;
     background-color: inherit;
     border-radius: 0px;
     color: inherit;
     box-shadow: 0 0 0 0;
 }
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 720px){
     #projectc{
         grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width: 720px) and (max-width: 1024px){
+    #projectc{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 .problock{
