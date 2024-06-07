@@ -69,7 +69,7 @@ function listPostsBlock(startNum,endNum){
         post = new DOMParser().parseFromString(post,'text/html');
         let time = post.getElementById('posttime').innerText;
         let posttitle = post.getElementById('posttitle').innerText;
-        $('#postlist').append(`<tr><td class="time enw3">${time}</td><td class="posttitle"><a href="${postUrl}" class="zhwb">${posttitle}</a><td></tr>`);
+        $('#postlist').append(`<tr><td class="time enw3">${time}</td><td class="posttitle"><a href="${postUrl}" class="zhwb" title="${posttitle}">${posttitle}</a><td></tr>`);
       }
     });
   }
