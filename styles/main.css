@@ -149,7 +149,7 @@ main{
 .pagehead{
     display: flex;
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     padding: 0.5vh 0;
     background-image: url(/pictures/title_bg.webp);
     background-size: cover;
