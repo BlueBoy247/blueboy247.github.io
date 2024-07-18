@@ -2,7 +2,6 @@
     height: fit-content;
     padding-bottom: 5%;
     display: grid;
-    display: none; /* 建置中 */
     grid-template-columns:repeat(3,1fr);
     gap: 15px;
     background-color: inherit;
@@ -51,4 +50,27 @@
 }
 .subbrief{
     font-size: 20px;
+}
+
+#backdiv{
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: 5vw;
+}
+#backdiv span{
+    font-size: 25px;
+}
+#backdiv:hover{
+    color: #999999;
+}
+#back{
+    overflow: hidden;
+}
+@media only screen and (max-width: 768px){
+    #backdiv{
+        display: none;
+    }
 }
