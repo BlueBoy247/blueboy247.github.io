@@ -4,7 +4,7 @@ function countArticles(name){
     url: `/article/${name}/articlelist.txt`,
     async: false,
     success: function(data){
-      num = data.split('\n').length;
+      num = data.split('\n').filter(line => line.trim() !== '').length;
     }
   });
   document.getElementById(name).innerHTML = num;
@@ -17,7 +17,7 @@ function listArticlesPage(name,now){
       url: `/article/${name}/articlelist.txt`,
       async: false,
       success: function(data){
-        page = Math.ceil((data.split('\n').length) / postNum);
+        page = Math.ceil((data.split('\n').filter(line => line.trim() !== '').length) / postNum);
       }
     }); 
     if(now==undefined){
@@ -55,7 +55,7 @@ function listArticlesPage(name,now){
       url: `/article/${name}/articlelist.txt`,
       async: false,
       success: function(data){
-        fileList = data.split('\n');
+        fileList = data.split('\n').filter(line => line.trim() !== '');
       }
     });
     if (fileList==[] || fileList==""){
@@ -71,8 +71,7 @@ function listArticlesPage(name,now){
     $(`#postblock`).css("display","table");
     fileList.reverse();
     for (let i=startNum; i<endNum && i<fileList.length; i++) {
-      let postData=fileList[i].split(' ');
-      let postPath=postData[0];
+      let postPath=fileList[i];
       let postUrl=`/article/${name}/${postPath}`;
       $.ajax({
         url: `/article/${name}/${postPath}/index.html`,
