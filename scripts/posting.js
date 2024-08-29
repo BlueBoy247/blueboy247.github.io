@@ -5,7 +5,7 @@ function listPostsPage(now){
     url: '/blog/postlist.txt',
     async: false,
     success: function(data){
-      page = Math.ceil((data.split('\n').length) / postNum);
+      page = Math.ceil((data.split('\n').filter(line => line.trim() !== '').length) / postNum);
     }
   }); 
   if(now==undefined){
@@ -43,7 +43,7 @@ function listPostsBlock(startNum,endNum){
     url: '/blog/postlist.txt',
     async: false,
     success: function(data){
-      fileList = data.split('\n');
+      fileList = data.split('\n').filter(line => line.trim() !== '');
     }
   });
   if (fileList==[] || fileList==""){
@@ -59,8 +59,7 @@ function listPostsBlock(startNum,endNum){
   $(`#postblock`).css("display","table");
   fileList.reverse();
   for (let i=startNum; i<endNum && i<fileList.length; i++) {
-    let postData=fileList[i].split(' ');
-    let postPath=postData[0];
+    let postPath=fileList[i];
     let postUrl=`/blog/posts/${postPath}`;
     $.ajax({
       url: `/blog/posts/${postPath}/index.html`,
