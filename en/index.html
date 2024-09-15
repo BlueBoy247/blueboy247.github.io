@@ -154,21 +154,27 @@
                                 <label class="enw2 label" for="sender" style="display: flex; align-items: center;">Name&ensp;<span style="color: red;">*</span></label>
                             </li>
                             <li>
-                                <input type="text" class="text enw2" id="sender" name="sender" placeholder="Your Name" required>
+                                <input type="text" class="text enw2" id="sender" name="sender" placeholder="Your Name" autocomplete="name" required>
                             </li>
                             <li class="center">
                                 <label class="enw2 label" for="email" style="display: flex; align-items: center;">Email&ensp;<span style="color: red;">*</span></label>
                             </li>
                             <li>
-                                <input type="email" class="text enw2" id="email" name="email" placeholder="Your E-mail Address" required>
+                                <input type="email" class="text enw2" id="email" name="email" placeholder="Your E-mail Address" autocomplete="email" required>
                             </li>
                             <li>
                                 <label class="enw2 label" for="purpose">Purpose&ensp;<span style="color: red;">*</span></label>
                             </li>
                             <li>
                                 <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="contact" required checked><span class="optionw">General Contact</span></label>
-                                <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="business" required><span class="optionw">Business Contact</span></label>
-                                <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="suggest" required><span class="optionw">Suggestions for website</span></label>
+                                <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="website-suggestion" required><span class="optionw">Suggestions for website</span></label>
+                                <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="project-suggestion" required><span class="optionw">Suggestions for project</span></label>
+                            </li>
+                            <li>
+                                <label class="enw2 label" for="subject">Subject&ensp;<span style="color: red;">*</span></label>
+                            </li>
+                            <li>
+                                <input type="text" class="text enw2" id="subject" name="subject" placeholder="Enter subject" required>
                             </li>
                             <li>
                                 <label class="enw2 label" for="content">Content&ensp;<span style="color: red;">*</span></label>
@@ -177,10 +183,9 @@
                                 <textarea name="content" class="enw2" id="content" maxlength="6000" placeholder="Enter your message" required></textarea>
                             </li>
                         </ul>
-                        <div id="verify"><div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div></div>
                         <div id="buttonblock">
-                            <button class="enw2" name="submit" type="submit">Submit</button>
-                            <button class="enw2" name="reset" type="reset">Reset</button>
+                            <button class="enw2" id="submit" type="submit">Submit</button>
+                            <button class="enw2" id="reset" type="reset">Reset</button>
                         </div>
                         <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
                     </form>

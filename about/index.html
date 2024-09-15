@@ -160,21 +160,27 @@
                                     
                                 </li>
                                 <li>
-                                    <input type="text" class="text zhw" id="sender" name="sender" placeholder="您的姓名" required>
+                                    <input type="text" class="text zhw" id="sender" name="sender" placeholder="您的姓名" autocomplete="name" required>
                                 </li>
                                 <li class="center">
                                     <label class="zhw label" for="email" style="display: flex; align-items: center;">電子信箱&ensp;<span style="color: red;">*</span></label>
                                 </li>
                                 <li>
-                                    <input type="email" class="text zhw" id="email" name="email" placeholder="您的電子信箱" required>
+                                    <input type="email" class="text zhw" id="email" name="email" placeholder="您的電子信箱" autocomplete="email" required>
                                 </li>
                                 <li>
                                     <label class="zhw label" for="purpose">聯絡目的&ensp;<span style="color: red;">*</span></label>
                                 </li>
                                 <li>
                                     <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span></label>
-                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="business" required><span class="optionw">商業接洽</span></label>
-                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="suggest" required><span class="optionw">網站改善建議</span></label>
+                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="website-suggestion" required><span class="optionw">網站改善建議</span></label>
+                                    <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="project-suggestion" required><span class="optionw">專案改善建議</span></label>
+                                </li>
+                                <li>
+                                    <label class="zhw label" for="content">主旨&ensp;<span style="color: red;">*</span></label>
+                                </li>
+                                <li>
+                                    <input type="text" class="text zhw" id="subject" name="subject" placeholder="請輸入主旨" required>
                                 </li>
                                 <li>
                                     <label class="zhw label" for="content">內容&ensp;<span style="color: red;">*</span></label>
@@ -183,10 +189,9 @@
                                     <textarea name="content" class="zhw" id="content" maxlength="6000" placeholder="請輸入訊息" required></textarea>
                                 </li>
                             </ul>
-                            <div id="verify"><div class="g-recaptcha" data-sitekey="6LfRxTwlAAAAAEOCk-J4KVAb_Nhz3lwKJwWY1hpc"></div></div>
                             <div id="buttonblock">
-                                <button class="zhw" name="submit" type="submit">送出</button>
-                                <button class="zhw" name="reset" type="reset">重填</button>
+                                <button class="zhw" id="submit" type="submit">送出</button>
+                                <button class="zhw" id="reset" type="reset">重填</button>
                             </div>
                             <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
                         </form>
