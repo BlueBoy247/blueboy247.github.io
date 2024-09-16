@@ -12,15 +12,15 @@
     margin: 1%;
     grid-template-columns: repeat(8,1fr);
 }
-@media only screen and (min-width: 425px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1280px){
     .items{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .smallitems{
         grid-template-columns: repeat(4,1fr);
     }
 }
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 768px){
     .items{
         grid-template-columns: repeat(1,1fr);
     }
@@ -85,7 +85,7 @@ details{
     margin: 1%;
     font-size: 20px;
 }
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1280px){
     .title{
         font-size: 18px;
     }
@@ -260,12 +260,12 @@ button:active{
     color: inherit;
     box-shadow: 0 0 0 0;
 }
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 768px){
     #projectc{
         grid-template-columns: repeat(1,1fr);
     }
 }
-@media only screen and (min-width: 720px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1280px){
     #projectc{
         grid-template-columns: repeat(2,1fr);
     }
