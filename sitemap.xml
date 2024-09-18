@@ -9,58 +9,78 @@
 
 <url>
   <loc>https://blueboy247.github.io/</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
+  <lastmod>2024-09-18T18:33:24+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://blueboy247.github.io/projects/</loc>
+  <lastmod>2024-09-18T18:33:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/contact/</loc>
+  <lastmod>2024-09-18T18:33:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://blueboy247.github.io/blog/</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://blueboy247.github.io/article/</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://blueboy247.github.io/about/</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blueboy247.github.io/en/</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
+  <lastmod>2024-09-18T18:33:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blueboy247.github.io/website_old_ver/</loc>
-  <lastmod>2024-03-29T10:20:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://blueboy247.github.io/privacy.html</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://blueboy247.github.io/about/project.html</loc>
-  <lastmod>2024-04-26T10:19:32+00:00</lastmod>
+  <loc>https://blueboy247.github.io/blog/archives/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blueboy247.github.io/website_old_ver/about.html</loc>
-  <lastmod>2024-03-29T10:20:41+00:00</lastmod>
+  <loc>https://blueboy247.github.io/blog/categories/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blueboy247.github.io/website_old_ver/project.html</loc>
-  <lastmod>2024-03-29T10:20:41+00:00</lastmod>
+  <loc>https://blueboy247.github.io/blog/privacy.html</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blueboy247.github.io/website_old_ver/test.html</loc>
-  <lastmod>2024-03-29T10:20:41+00:00</lastmod>
+  <loc>https://blueboy247.github.io/en/contact/</loc>
+  <lastmod>2024-09-18T18:33:24+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/blog/categories/projects/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/blog/categories/courses/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/blog/categories/competitions/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/blog/categories/reviews/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/blog/categories/LoTuX_CTF_Writeup/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://blueboy247.github.io/blog/categories/picoCTF_Writeup/</loc>
+  <lastmod>2024-09-18T18:34:04+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
