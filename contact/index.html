@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-    <title>Allen Chang</title>
+    <title>聯絡 | Allen Chang</title>
     <!-- meta tag -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,113 +76,60 @@
     <main>
         <div class="pagehead">
             <p class="pagetitle">
-                <span class="zhwb"></span>
+                <span class="zhwb">聯絡</span>
             </p>
         </div>
         <div class="content">
-            <h2 class="zhw">Allen Chang</h2>
-            <hr>
-            <p class="zhw">一名正在努力不爆肝的大學生。</p>
-            <p class="zhw">目前正在學習全端開發、外掛程式與手機應用開發、物聯網、機器學習及資安技術。</p>
-            <h3 class="zhw" id="education">學歷</h3>
-            <div class="items">
-                <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
-                    <img src="/pictures/profile_use/education/ck_seal.png" alt="建國中學校徽">
-                    <p class="title zhw">臺北市立建國高級中學</p>
-                    <p class="description zhw">普通科</p>
-                    <p class="time zhw">2021/09 ~ 2024/06</p>
-                </a>
-                <a class="item" href="https://cs.utaipei.edu.tw/" target="_blank">
-                    <img src="/pictures/profile_use/education/utaipei_seal.png" alt="臺北市立大學校徽">
-                    <p class="title zhw">臺北市立大學</p>
-                    <p class="description zhw">資訊科學系</p>
-                    <p class="time zhw">2024/09 ~ 2028/06</p>
-                </a>
-            </div>
-            <h3 class="zhw" id="experience">經歷</h3>
-            <div class="items">
-                <a class="item" href="https://35.infor.org" target="_blank">
-                    <img src="/pictures/profile_use/experience/infor35th.png" alt="INFOR35th社徽">
-                    <p class="title zhw">建國中學資訊社35th</p>
-                    <p class="description zhw">內務</p>
-                    <p class="time zhw">2023/02 ~ 2023/07</p>
-                </a>
-            </div>
-            <h3 class="zhw" id="skill">技能</h3>
-            <div class="smallitems">
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/html5.svg" alt="HTML5 icon">
-                    <p class="title zhw">HTML 5</p>
+            <form method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
+                <ul style="padding-inline-start: 0px;">
+                    <li class="center">
+                        <label class="zhw label" for="sender" style="display: flex; align-items: center;">姓名&ensp;<span style="color: red;">*</span></label>
+                    </li>
+                    <li>
+                        <input type="text" class="text zhw" id="sender" name="sender" placeholder="您的姓名" autocomplete="name" required>
+                    </li>
+                    <li class="center">
+                        <label class="zhw label" for="email" style="display: flex; align-items: center;">電子信箱&ensp;<span style="color: red;">*</span></label>
+                    </li>
+                    <li>
+                        <input type="email" class="text zhw" id="email" name="email" placeholder="您的電子信箱" autocomplete="email" required>
+                    </li>
+                    <li>
+                        <label class="zhw label" for="purpose">聯絡目的&ensp;<span style="color: red;">*</span></label>
+                    </li>
+                    <li>
+                        <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span></label>
+                        <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="website-suggestion" required><span class="optionw">網站改善建議</span></label>
+                        <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="project-suggestion" required><span class="optionw">專案改善建議</span></label>
+                    </li>
+                    <li>
+                        <label class="zhw label" for="content">主旨&ensp;<span style="color: red;">*</span></label>
+                    </li>
+                    <li>
+                        <input type="text" class="text zhw" id="subject" name="subject" placeholder="請輸入主旨" required>
+                    </li>
+                    <li>
+                        <label class="zhw label" for="content">內容&ensp;<span style="color: red;">*</span></label>
+                    </li>
+                    <li>
+                        <textarea name="content" class="zhw" id="content" maxlength="6000" placeholder="請輸入訊息" required></textarea>
+                    </li>
+                </ul>
+                <div id="buttonblock">
+                    <button class="zhw" id="submit" type="submit">送出</button>
+                    <button class="zhw" id="reset" type="reset">重填</button>
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/css3.svg" alt="CSS3 icon">
-                    <p class="title zhw">CSS 3</p>
-                </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/javascript.svg" alt="Javascript icon">
-                    <p class="title zhw">JavaScript</p>
-                </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/jquery.svg" alt="jQuery icon">
-                    <p class="title zhw">jQuery</p>
-                </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/python.svg" alt="Python3 icon">
-                    <p class="title zhw">Python 3</p>
-                </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/c.svg" alt="C icon">
-                    <p class="title zhw">C</p>
-                </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/arduino.svg" alt="Arduino icon">
-                    <p class="title zhw">Arduino</p>
-                </div>
-            </div>
-            <h3 class="zhw" id="links">個人連結</h3>
-            <div class="smallitems">
-                <a class="item" href="https://blueboy247.github.io/blog/" target="_blank">
-                    <img src="/pictures/profile_use/link/myblog.ico" alt="My Blog">
-                    <p class="title zhw">My Blog</p>
-                </a>
-                <a class="item" href="https://codeforces.com/profile/shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/codeforces.svg" alt="Codeforces logo">
-                     <p class="title zhw">Codeforces</p>
-                </a>
-                <a class="item" href="https://atcoder.jp/users/Shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/atcoder.svg" alt="AtCoder logo">
-                    <p class="title zhw">AtCoder</p>
-                </a>
-                <a class="item" href="https://www.linkedin.com/in/allenchang247" target="_blank">
-                    <img src="/pictures/profile_use/link/linkedin.svg" alt="LinkedIn logo">
-                    <p class="title zhw">LinkedIn</p>
-                </a>
-                <a class="item" href="https://gitroll.io/profile/uC0VuSxBplmRPBkxXoFcO7zl1rL43" target="_blank">
-                    <img src="/pictures/profile_use/link/gitroll.svg" alt="GitRoll logo">
-                    <p class="title zhw">GitRoll</p>
-                </a>
-                <a class="item" href="https://zerojudge.tw/UserStatistic?id=185068" target="_blank">
-                    <img src="/pictures/profile_use/link/zerojudge.svg" alt="ZeroJudge logo">
-                    <p class="title zhw">ZeroJudge</p>
-                </a>
-                <a class="item" href="https://tioj.ck.tp.edu.tw/users/allen247" target="_blank">
-                    <img src="/pictures/profile_use/link/tioj.svg" alt="TIOJ logo">
-                    <p class="title zhw">TIOJ</p>
-                </a>
-                <a class="item" href="https://www.hackerrank.com/profile/Shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/hackerrank.svg" alt="HackerRank logo">
-                    <p class="title zhw">HackerRank</p>
-                </a>
-                <a class="item" href="https://leetcode.com/u/Shuba247/" target="_blank">
-                    <img src="/pictures/profile_use/link/leetcode.svg" alt="LeetCode logo">
-                    <p class="title zhw">LeetCode</p>
-                </a>
-                <a class="item" href="https://play.picoctf.org/users/shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/picoctf.svg" alt="picoCTF logo">
-                    <p class="title zhw">picoCTF</p>
-                </a>
-            </div>
+                <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
+            </form>
         </div>
+        <script>
+            var textarea = document.querySelector('textarea');
+    
+            textarea.addEventListener('input', (e) => {
+                textarea.style.height = '100px';
+                textarea.style.height = e.target.scrollHeight + 'px';
+            });
+        </script>
     </main>
     <footer>
         <p class="enw2" id="siterights">

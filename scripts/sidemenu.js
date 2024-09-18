@@ -8,8 +8,8 @@ document.getElementById('menu').addEventListener('click',function(){
         expanded = false;
     }else{
         nav.style.display = 'block';
-        nav.style.width = '50vw';
-        nav.style.paddingLeft = '50vw';
+        nav.style.width = '300px';
+        nav.style.paddingLeft = 'calc(100vw - 300px)';
         expanded = true;
     }
 })

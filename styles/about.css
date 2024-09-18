@@ -1,5 +1,4 @@
 /*index page*/
-/*profile part*/
 .items{
     display: grid;
     gap: 7px;
@@ -12,7 +11,7 @@
     margin: 1%;
     grid-template-columns: repeat(8,1fr);
 }
-@media only screen and (min-width: 768px) and (max-width: 1280px){
+@media only screen and (min-width: 768px) and (max-width: 1368px){
     .items{
         grid-template-columns: repeat(2,1fr);
     }
@@ -30,7 +29,7 @@
 }
 .items .item{
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     padding: 0.5em;
@@ -68,22 +67,22 @@
 }
 .items .item .title{
     font-size: 20px;
-    text-align: left;
+    text-align: center;
+    margin: 0%;
 }
-.items .item .description{
-    text-align: left;
-    font-size: 18px;
+.items .item .description,
+.items .item .time{
+    font-size: 16px;
+    text-align: center;
+    margin: 0%;
 }
 .smallitems .item .title{
     font-size: 20px;
     text-align: center;
 }
-#projectitems{
-    grid-template-columns: repeat(1,1fr);
-}
-details{
-    margin: 1%;
-    font-size: 20px;
+#certificateitems .description{
+    color: #2d726b;
+    font-weight: 700;
 }
 @media only screen and (max-width: 1280px){
     .title{
@@ -92,27 +91,12 @@ details{
     .description{
         font-size: 15px;
     }
-    details{
-        font-size: 15px;
-    }
-}
-details img{
-    max-width: 100%;
-}
-details a{
-    text-decoration: none;
-}
-details li{
-    margin: 0;
 }
 
-/*contact part*/
+/*contact page*/
 form{
-    width: 92%;
-    margin: 1% 2%;
-    padding: 2%;
+    width: 100%;
     border-radius: 15px;
-    font-size: 20px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -126,7 +110,7 @@ form li{
 .label{
     width: auto;
     height: auto;
-    font-size: 23px;
+    font-size: 25px;
 }
 .text{
     width: 100%;
@@ -151,7 +135,7 @@ form li{
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    padding: 1%;
+    padding: 0.5% 1%;
     font-size: 20px;
 }
 .option:hover+.optionw{
@@ -199,59 +183,55 @@ button:active{
 }
 @media only screen and (max-width: 768px){
     .label{
-        font-size: 18px;
+        font-size: 20px;
     }
     .text{
-        font-size: 15px;
+        font-size: 16px;
     }
     .text::-webkit-input-placeholder{
-        font-size: 15px;
+        font-size: 16px;
     }
     .option{
         display: block;
     }
     .optionw{
-        font-size: 15px;
+        font-size: 16px;
     }
     textarea{
-        font-size: 15px;
+        font-size: 16px;
     }
     textarea::-webkit-input-placeholder{
-        font-size: 15px;
+        font-size: 16px;
     }
     button{
-        font-size: 15px;
+        font-size: 16px;
         height: 40px;
     }
 }
 
 /*project page*/
-/*project part*/
-#backdiv{
-    display: flex;
-    align-items: center;
-    color: #000000;
-    text-decoration: none;
-    width: fit-content;
-    margin-left: 5vw;
-}
-#backdiv span{
-    font-size: 25px;
-}
-#backdiv:hover{
-    color: #999999;
-}
-#back{
+#choose{
     overflow: hidden;
+    height: fit-content;
+    margin: 0 5vw;
+    padding: 0 2%;
 }
-@media only screen and (max-width: 768px){
-    #backdiv{
-        display: none;
-    }
+#choosetype{
+    width: 100%;
+    height: fit-content;
+    font-size: 20px;
+    background-color: inherit;
+    border: #2d726b solid 3px;
+    border-radius: 10px;
+    padding: 0.5% 1%;
+    box-sizing: border-box;
 }
 #projectc{
+    overflow: hidden;
+    min-height: 120px;
     height: fit-content;
-    padding-bottom: 5%;
+    margin: 1% 5vw 2% 5vw;
+    padding: 2% 2% 5% 2%;
     display: grid;
     grid-template-columns:repeat(3,1fr);
     gap: 15px;
@@ -260,12 +240,12 @@ button:active{
     color: inherit;
     box-shadow: 0 0 0 0;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 800px){
     #projectc{
         grid-template-columns: repeat(1,1fr);
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1280px){
+@media only screen and (min-width: 800px) and (max-width: 1280px){
     #projectc{
         grid-template-columns: repeat(2,1fr);
     }
@@ -302,8 +282,24 @@ button:active{
     object-fit: cover;
 }
 .protitle{
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
+}
+.protag{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+}
+.protag span{
+    font-size: 16px;
+    background-color: #46ada3;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 0 5px;
+    line-height: 1.5;
+    white-space: nowrap;
 }
 .probrief{
     font-size: 20px;

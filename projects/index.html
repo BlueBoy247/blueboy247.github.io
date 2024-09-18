@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-    <title>Allen Chang</title>
+    <title>專案作品 | Allen Chang</title>
     <!-- meta tag -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,10 @@
 
         gtag('config', 'G-VPCV2CWSBB');
     </script>
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-9189513725790874">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9189513725790874"
+     crossorigin="anonymous"></script>
     <!-- other source -->
     <link rel="stylesheet" href="/styles/about.css">
 </head>
@@ -76,112 +80,66 @@
     <main>
         <div class="pagehead">
             <p class="pagetitle">
-                <span class="zhwb"></span>
+                <span class="zhwb">專案</span>
             </p>
         </div>
-        <div class="content">
-            <h2 class="zhw">Allen Chang</h2>
-            <hr>
-            <p class="zhw">一名正在努力不爆肝的大學生。</p>
-            <p class="zhw">目前正在學習全端開發、外掛程式與手機應用開發、物聯網、機器學習及資安技術。</p>
-            <h3 class="zhw" id="education">學歷</h3>
-            <div class="items">
-                <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
-                    <img src="/pictures/profile_use/education/ck_seal.png" alt="建國中學校徽">
-                    <p class="title zhw">臺北市立建國高級中學</p>
-                    <p class="description zhw">普通科</p>
-                    <p class="time zhw">2021/09 ~ 2024/06</p>
-                </a>
-                <a class="item" href="https://cs.utaipei.edu.tw/" target="_blank">
-                    <img src="/pictures/profile_use/education/utaipei_seal.png" alt="臺北市立大學校徽">
-                    <p class="title zhw">臺北市立大學</p>
-                    <p class="description zhw">資訊科學系</p>
-                    <p class="time zhw">2024/09 ~ 2028/06</p>
-                </a>
-            </div>
-            <h3 class="zhw" id="experience">經歷</h3>
-            <div class="items">
-                <a class="item" href="https://35.infor.org" target="_blank">
-                    <img src="/pictures/profile_use/experience/infor35th.png" alt="INFOR35th社徽">
-                    <p class="title zhw">建國中學資訊社35th</p>
-                    <p class="description zhw">內務</p>
-                    <p class="time zhw">2023/02 ~ 2023/07</p>
-                </a>
-            </div>
-            <h3 class="zhw" id="skill">技能</h3>
-            <div class="smallitems">
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/html5.svg" alt="HTML5 icon">
-                    <p class="title zhw">HTML 5</p>
+        <div id="choose">
+            <select class="zhw" id="choosetype">
+                <option value="all" selected>全部</option>
+                <option value="personal">個人專案</option>
+                <option value="infor35th">@ INFOR 35th</option>
+            </select>
+        </div>
+        <div id="projectc">
+            <a href="https://github.com/BlueBoy247/Notice-Bot" target="_blank" class="problock personal">
+                <div class="proimage">
+                    <img src="/pictures/project_use/NoticeBot.png" alt="Notice Bot" title="Notice Bot">
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/css3.svg" alt="CSS3 icon">
-                    <p class="title zhw">CSS 3</p>
+                <p class="protitle zhwb">Notice Bot</p>
+                <div class="protag zhw">
+                    <span>Discord-Bot</span>
+                    <span>Python</span>
+                    <span>Discord.py</span>
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/javascript.svg" alt="Javascript icon">
-                    <p class="title zhw">JavaScript</p>
+                <p class="probrief zhw">會替你倒數事件的 DC Bot。</p>
+            </a>
+            <a href="https://tw-anscheck.pages.dev/" target="_blank" class="problock personal">
+                <div class="proimage">
+                    <img src="/pictures/project_use/TW-AnsCheck.png" alt="臺灣升學考試對答" title="臺灣升學考試對答">
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/jquery.svg" alt="jQuery icon">
-                    <p class="title zhw">jQuery</p>
+                <p class="protitle zhwb">臺灣升學考試對答</p>
+                <div class="protag zhw">
+                    <span>HTML</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/python.svg" alt="Python3 icon">
-                    <p class="title zhw">Python 3</p>
+                <p class="probrief zhw">線上對升學考試答案的平台。</p>
+            </a>
+            <a href="https://35.infor.org/" target="_blank" class="problock infor35th">
+                <div class="proimage">
+                    <img src="/pictures/project_use/infor35th-website.png" alt="INFOR 35th 社網" title="INFOR 35th 社網">
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/c.svg" alt="C icon">
-                    <p class="title zhw">C</p>
+                <p class="protitle zhwb">INFOR 35th 官網</p>
+                <div class="protag zhw">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
                 </div>
-                <div class="item">
-                    <img src="/pictures/profile_use/skill/arduino.svg" alt="Arduino icon">
-                    <p class="title zhw">Arduino</p>
+                <p class="probrief zhw">建中資訊社35屆社團官網。</p>
+            </a>
+            <a href="https://blueboy247.github.io/blog/" target="_blank" class="problock personal">
+                <div class="proimage">
+                    <img src="/pictures/project_use/MyBlog.png" alt="My Blog" title="My Blog">
                 </div>
-            </div>
-            <h3 class="zhw" id="links">個人連結</h3>
-            <div class="smallitems">
-                <a class="item" href="https://blueboy247.github.io/blog/" target="_blank">
-                    <img src="/pictures/profile_use/link/myblog.ico" alt="My Blog">
-                    <p class="title zhw">My Blog</p>
-                </a>
-                <a class="item" href="https://codeforces.com/profile/shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/codeforces.svg" alt="Codeforces logo">
-                     <p class="title zhw">Codeforces</p>
-                </a>
-                <a class="item" href="https://atcoder.jp/users/Shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/atcoder.svg" alt="AtCoder logo">
-                    <p class="title zhw">AtCoder</p>
-                </a>
-                <a class="item" href="https://www.linkedin.com/in/allenchang247" target="_blank">
-                    <img src="/pictures/profile_use/link/linkedin.svg" alt="LinkedIn logo">
-                    <p class="title zhw">LinkedIn</p>
-                </a>
-                <a class="item" href="https://gitroll.io/profile/uC0VuSxBplmRPBkxXoFcO7zl1rL43" target="_blank">
-                    <img src="/pictures/profile_use/link/gitroll.svg" alt="GitRoll logo">
-                    <p class="title zhw">GitRoll</p>
-                </a>
-                <a class="item" href="https://zerojudge.tw/UserStatistic?id=185068" target="_blank">
-                    <img src="/pictures/profile_use/link/zerojudge.svg" alt="ZeroJudge logo">
-                    <p class="title zhw">ZeroJudge</p>
-                </a>
-                <a class="item" href="https://tioj.ck.tp.edu.tw/users/allen247" target="_blank">
-                    <img src="/pictures/profile_use/link/tioj.svg" alt="TIOJ logo">
-                    <p class="title zhw">TIOJ</p>
-                </a>
-                <a class="item" href="https://www.hackerrank.com/profile/Shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/hackerrank.svg" alt="HackerRank logo">
-                    <p class="title zhw">HackerRank</p>
-                </a>
-                <a class="item" href="https://leetcode.com/u/Shuba247/" target="_blank">
-                    <img src="/pictures/profile_use/link/leetcode.svg" alt="LeetCode logo">
-                    <p class="title zhw">LeetCode</p>
-                </a>
-                <a class="item" href="https://play.picoctf.org/users/shuba247" target="_blank">
-                    <img src="/pictures/profile_use/link/picoctf.svg" alt="picoCTF logo">
-                    <p class="title zhw">picoCTF</p>
-                </a>
-            </div>
+                <p class="protitle zhwb">BlueBoy Space</p>
+                <div class="protag zhw">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>jQuery</span>
+                </div>
+                <p class="probrief zhw">我自己開發的個人部落格。</p>
+            </a>
         </div>
     </main>
     <footer>
@@ -193,5 +151,26 @@
             All Rights Reserved
         </p>
     </footer>
+    <script>
+        document.getElementById('choosetype').addEventListener('change',function(){
+            let type = document.getElementById('choosetype').value;
+            if(type != 'all'){
+                let typeblock = document.getElementsByClassName(type);
+                let allblock = document.getElementsByClassName('problock');
+                for(let block of allblock){
+                    block.style.display = 'none';
+                }
+                for(let block of typeblock){
+                    block.removeAttribute('style');
+                }
+            }
+            else{
+                let allblock = document.getElementsByClassName('problock');
+                for(let block of allblock){
+                    block.removeAttribute('style');
+                }
+            }
+        })
+    </script>
 </body>
 </html>
