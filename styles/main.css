@@ -116,12 +116,21 @@ header{
     fill:#ffffff;
     transition: 0.3s;
     text-decoration: none;
-    margin: 0 0.5vw;
+    margin: 0 0.75vw;
     overflow: visible;
 }
 .outb:hover{
     fill: #005048;
     color: #005048;
+}
+#lastupdate{
+    text-align: center;
+    color: #ffffff;
+}
+@media screen and (max-width: 600px){
+    .outb{
+        margin: 0 1.25vw;
+    }    
 }
 
 /*main content*/
