@@ -84,8 +84,16 @@
                 <span class="zhwb"></span>
             </p>
         </div>
+        <div class="subnav">
+            <button class="zhw" onclick="scrollToBlock('intro')">自我介紹</button>
+            <button class="zhw" onclick="scrollToBlock('education')">學歷</button>
+            <button class="zhw" onclick="scrollToBlock('experiences')">經歷</button>
+            <button class="zhw" onclick="scrollToBlock('skills')">技能</button>
+            <button class="zhw" onclick="scrollToBlock('links')">個人連結</button>
+            <script src="/scripts/subnav.js" type="text/javascript" defer></script>
+        </div>
         <div class="content">
-            <h2 class="zhw">Allen Chang</h2>
+            <h2 class="zhw" id="intro">Allen Chang</h2>
             <hr>
             <p class="zhw">一名正在努力不爆肝的大學生。</p>
             <p class="zhw">目前正在學習全端開發、外掛程式與手機應用開發、物聯網、機器學習及資安技術。</p>
@@ -132,12 +140,12 @@
                     <p class="title zhw">JavaScript</p>
                 </div>
                 <div class="item">
-                    <img src="/pictures/profile_use/skill/c.svg" alt="C icon">
-                    <p class="title zhw">C</p>
-                </div>
-                <div class="item">
                     <img src="/pictures/profile_use/skill/jquery.svg" alt="jQuery icon">
                     <p class="title zhw">jQuery</p>
+                </div>
+                <div class="item">
+                    <img src="/pictures/profile_use/skill/c.svg" alt="C icon">
+                    <p class="title zhw">C</p>
                 </div>
                 <div class="item">
                     <img src="/pictures/profile_use/skill/arduino.svg" alt="Arduino icon">

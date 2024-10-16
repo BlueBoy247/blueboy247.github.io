@@ -1,3 +1,28 @@
+.subnav{
+    margin: 0 5vw;
+    padding: 0 2%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.subnav button{
+    color: #000000;
+    margin: 10px;
+    border: solid 3px #46ada3;
+    border-radius: 5px;
+    background-color: inherit;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+.subnav button:hover{
+    background-color: #46ada3;
+    cursor: pointer;
+}
+.subnav::-webkit-scrollbar{
+    display: none;
+}
+
 /*index page*/
 .items{
     display: grid;
@@ -163,7 +188,7 @@ textarea::-webkit-input-placeholder{
     display: flex;
     justify-content: center;
 }
-button{
+form button{
     color: #000000;
     margin: 10px;
     border: solid 3px #46ada3;
@@ -174,11 +199,11 @@ button{
     font-size: 20px;
     transition: 0.3s;
 }
-button:hover{
+form button:hover{
     background-color: #46ada3;
     cursor: pointer;
 }
-button:active{
+form button:active{
     transform: scale(0.9);
 }
 @media only screen and (max-width: 768px){
