@@ -255,6 +255,13 @@ footer{
     }
 }
 
+/*back to top*/
+#backtotop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
 /*other*/
 .inline-block{
     display: inline-block;
