@@ -83,10 +83,12 @@
     background-color: #46ada3;
 }
 .items .item img{
+    width: 144px;
     height: 144px;
     object-fit: cover;
 }
 .smallitems .item img{
+    height: 96px;
     width: 96px;
     margin-bottom: 3%;
     object-fit: cover;
