@@ -16,13 +16,12 @@
 }
 #projectc{
     overflow: hidden;
-    min-height: 120px;
-    height: fit-content;
-    margin: 1% 5vw 2% 5vw;
-    padding: 2% 2% 5% 2%;
+    min-height: 100px;
+    margin: 1% 5vw;
+    padding: 2%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 5px;
     background-color: inherit;
     border-radius: 0px;
     color: inherit;
@@ -68,9 +67,14 @@
     font-size: 25px;
     text-align: left;
 }
+.protime{
+    font-size: 16px;
+    color: #777777;
+}
 .protag{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: left;
     align-items: center;
     margin: 2% 0;
@@ -80,7 +84,7 @@
     background-color: #46ada3;
     border-radius: 5px;
     padding: 2px 5px;
-    margin: 0 5px;
+    margin: 2px 5px;
     line-height: 1.5;
     white-space: nowrap;
 }
