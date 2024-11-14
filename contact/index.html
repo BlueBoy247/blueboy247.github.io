@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Allen Chang">
-    <meta name="description" content="聯繫我！請填寫聯絡表單以獲取更多資訊或進行詢問，我會盡快回覆您。">
+    <meta name="description" content="聯絡我！請填寫聯繫表單以獲取更多資訊或進行詢問，我會盡快回覆您。">
     <meta name="keywords" content="聯繫表單, 聯繫我, 詢問, 支援, 客戶服務, 聯絡資訊, 一般聯絡, 網站改善建議, 專案改善建議, Allen, Chang, Yu-Lun, blueboy, blueboy247">
     <!-- common source -->
     <link rel="stylesheet" href="/styles/main.css">
@@ -62,22 +62,22 @@
             </p>
         </div>
         <div class="content">
-            <form method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
-                <ul style="padding-inline-start: 0px;">
+            <form id="form" method="post" action="https://forms.un-static.com/forms/554dca137b92e51e5a2e6f75c87dc29bcf3ba8ee">
+                <ul>
                     <li class="center">
-                        <label class="zhw label" for="sender" style="display: flex; align-items: center;">姓名&ensp;<span style="color: red;">*</span></label>
+                        <label class="zhw label" for="sender" id="sender_label">姓名&ensp;<span class="required_mark">*</span></label>
                     </li>
                     <li>
                         <input type="text" class="text zhw" id="sender" name="sender" placeholder="您的姓名" autocomplete="name" required>
                     </li>
                     <li class="center">
-                        <label class="zhw label" for="email" style="display: flex; align-items: center;">電子信箱&ensp;<span style="color: red;">*</span></label>
+                        <label class="zhw label" for="email" id="email_label">電子信箱&ensp;<span class="required_mark">*</span></label>
                     </li>
                     <li>
                         <input type="email" class="text zhw" id="email" name="email" placeholder="您的電子信箱" autocomplete="email" required>
                     </li>
                     <li>
-                        <label class="zhw label" for="purpose">聯絡目的&ensp;<span style="color: red;">*</span></label>
+                        <label class="zhw label" for="purpose" id="purpose_label">聯絡目的&ensp;<span class="required_mark">*</span></label>
                     </li>
                     <li>
                         <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span></label>
@@ -85,13 +85,13 @@
                         <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="project-suggestion" required><span class="optionw">專案改善建議</span></label>
                     </li>
                     <li>
-                        <label class="zhw label" for="content">主旨&ensp;<span style="color: red;">*</span></label>
+                        <label class="zhw label" for="subject" id="subject_label">主旨&ensp;<span class="required_mark">*</span></label>
                     </li>
                     <li>
                         <input type="text" class="text zhw" id="subject" name="subject" placeholder="請輸入主旨" required>
                     </li>
                     <li>
-                        <label class="zhw label" for="content">內容&ensp;<span style="color: red;">*</span></label>
+                        <label class="zhw label" for="content" id="content_label">內容&ensp;<span class="required_mark">*</span></label>
                     </li>
                     <li>
                         <textarea name="content" class="zhw" id="content" maxlength="6000" placeholder="請輸入訊息" required></textarea>
@@ -101,11 +101,18 @@
                     <button class="zhw" id="submit" type="submit">送出</button>
                     <button class="zhw" id="reset" type="reset">重填</button>
                 </div>
-                <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
+                <p class="enw2" id="poweredby">
+                    <small>
+                        <br>Powered by
+                        <a rel="nofollow" href="https://un-static.com/" target="_blank">
+                            Un-static Forms
+                        </a>
+                    </small>
+                </p>
             </form>
         </div>
         <script>
-            var textarea = document.querySelector('textarea');
+            let textarea = document.querySelector('textarea');
     
             textarea.addEventListener('input', (e) => {
                 textarea.style.height = '100px';

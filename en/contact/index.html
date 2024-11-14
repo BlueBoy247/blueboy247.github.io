@@ -60,52 +60,66 @@
             </p>
         </div>
         <div class="content">
-            <div id="form">
-                <form method="post" action="https://forms.un-static.com/forms/3935968d3de2f8492f740efc3fea65376d200211">
-                    <ul style="padding-inline-start: 0px;">
-                        <li class="center">
-                            <label class="enw2 label" for="sender" style="display: flex; align-items: center;">Name&ensp;<span style="color: red;">*</span></label>
-                        </li>
-                        <li>
-                            <input type="text" class="text enw2" id="sender" name="sender" placeholder="Your Name" autocomplete="name" required>
-                        </li>
-                        <li class="center">
-                            <label class="enw2 label" for="email" style="display: flex; align-items: center;">Email&ensp;<span style="color: red;">*</span></label>
-                        </li>
-                        <li>
-                            <input type="email" class="text enw2" id="email" name="email" placeholder="Your E-mail Address" autocomplete="email" required>
-                        </li>
-                        <li>
-                            <label class="enw2 label" for="purpose">Purpose&ensp;<span style="color: red;">*</span></label>
-                        </li>
-                        <li>
-                            <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="contact" required checked><span class="optionw">General Contact</span></label>
-                            <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="website-suggestion" required><span class="optionw">Suggestions for website</span></label>
-                            <label class="enw2"><input type="radio" name="type" class="option enw2" id="purpose" value="project-suggestion" required><span class="optionw">Suggestions for project</span></label>
-                        </li>
-                        <li>
-                            <label class="enw2 label" for="subject">Subject&ensp;<span style="color: red;">*</span></label>
-                        </li>
-                        <li>
-                            <input type="text" class="text enw2" id="subject" name="subject" placeholder="Enter subject" required>
-                        </li>
-                        <li>
-                            <label class="enw2 label" for="content">Content&ensp;<span style="color: red;">*</span></label>
-                        </li>
-                        <li>
-                            <textarea name="content" class="enw2" id="content" maxlength="6000" placeholder="Enter your message" required></textarea>
-                        </li>
-                    </ul>
-                    <div id="buttonblock">
-                        <button class="enw2" id="submit" type="submit">Submit</button>
-                        <button class="enw2" id="reset" type="reset">Reset</button>
-                    </div>
-                    <p class="enw2" style="text-align: center;"><small><br>Powered by <a rel="nofollow" href="https://un-static.com/" style="color: blue;">Un-static Forms</a></small></p>
-                </form>
-            </div>
+            <form id="form" method="post" action="https://forms.un-static.com/forms/3935968d3de2f8492f740efc3fea65376d200211">
+                <ul>
+                    <li class="center">
+                        <label class="enw2 label" for="sender" id="sender_label">Name&ensp;<span class="required_mark">*</span></label>
+                    </li>
+                    <li>
+                        <input type="text" class="text enw2" id="sender" name="sender" placeholder="Your Name" autocomplete="name" required>
+                    </li>
+                    <li class="center">
+                        <label class="enw2 label" for="email" id="email_label">Email&ensp;<span class="required_mark">*</span></label>
+                    </li>
+                    <li>
+                        <input type="email" class="text enw2" id="email" name="email" placeholder="Your E-mail Address" autocomplete="email" required>
+                    </li>
+                    <li>
+                        <label class="enw2 label" id="purpose_label">Purpose&ensp;<span class="required_mark">*</span></label>
+                    </li>
+                    <li>
+                        <label class="enw2" for="purpose1">
+                            <input type="radio" name="type" class="option enw2" id="purpose1" value="contact" required checked>
+                            <span class="optionw">General Contact</span>
+                        </label>
+                        <label class="enw2" for="purpose2">
+                            <input type="radio" name="type" class="option enw2" id="purpose2" value="website-suggestion" required>
+                            <span class="optionw">Suggestions for website</span>
+                        </label>
+                        <label class="enw2" for="purpose3">
+                            <input type="radio" name="type" class="option enw2" id="purpose3" value="project-suggestion" required>
+                            <span class="optionw">Suggestions for project</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="enw2 label" for="subject" id="subject_label">Subject&ensp;<span class="required_mark">*</span></label>
+                    </li>
+                    <li>
+                        <input type="text" class="text enw2" id="subject" name="subject" placeholder="Enter subject" required>
+                    </li>
+                    <li>
+                        <label class="enw2 label" for="content" id="content_label">Content&ensp;<span class="required_mark">*</span></label>
+                    </li>
+                    <li>
+                        <textarea name="content" class="enw2" id="content" maxlength="6000" placeholder="Enter your message" required></textarea>
+                    </li>
+                </ul>
+                <div id="buttonblock">
+                    <button class="enw2" id="submit" type="submit">Submit</button>
+                    <button class="enw2" id="reset" type="reset">Reset</button>
+                </div>
+                <p class="enw2" id="poweredby">
+                    <small>
+                        <br>Powered by
+                        <a rel="nofollow" href="https://un-static.com/" target="_blank">
+                            Un-static Forms
+                        </a>
+                    </small>
+                </p>
+            </form>
         </div>
         <script>
-            var textarea = document.querySelector('textarea');
+            let textarea = document.querySelector('textarea');
     
             textarea.addEventListener('input', (e) => {
                 textarea.style.height = '100px';
