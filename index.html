@@ -29,6 +29,7 @@
     </script>
     <!-- other source -->
     <link rel="stylesheet" href="/styles/about.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 </head>
 <body>
     <header>
@@ -40,6 +41,7 @@
                 <path d="M4 18L20 18 M4 12L20 12 M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </a>
+
         <nav>
             <ul id="mobilenav">
                 <li><a class="navb zhwb" href="/">首頁</a></li>
@@ -55,12 +57,14 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="pagehead">
             <p class="pagetitle">
                 <span class="zhwb"></span>
             </p>
         </div>
+
         <div class="subnav">
             <button class="zhw" onclick="scrollToBlock('intro')">自我介紹</button>
             <button class="zhw" onclick="scrollToBlock('education')">學歷</button>
@@ -70,12 +74,14 @@
             <button class="zhw" onclick="scrollToBlock('links')">個人連結</button>
             <script src="/scripts/subnav.js" type="text/javascript" defer></script>
         </div>
+
         <div class="content">
             <h2 class="zhw" id="intro">Allen Chang</h2>
             <hr>
             <p class="zhw">一名正在努力不爆肝的大學生。</p>
             <p class="zhw">目前正在學習全端開發、外掛程式與手機應用開發、物聯網、機器學習及資安技術。</p>
             <p class="zhw">興趣有彈鋼琴、打羽球、聽音樂、看動漫、看輕小說、看 VTuber 直播，喜歡日本二次元文化，VTuber 主推 hololive 的大空スバル。</p>
+            
             <h3 class="zhw" id="education">學歷</h3>
             <div class="items">
                 <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
@@ -99,52 +105,42 @@
                     <p class="time zhw">2024/09 ~ Present</p>
                 </a>
             </div>
+            
             <h3 class="zhw" id="experiences">工作經歷</h3>
             <div class="items">
-                <a class="item" href="https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do?banNo=50901194&fhl=zh_TW" target="_blank">
+                <a class="item open-popup" href="#" data-name="exp_tonghsun" data-lang="tw">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/tonghsun.webp" type="image/webp">
                         <source srcset="/pictures/profile_use/experience/tonghsun.png" type="image/png">
                         <img src="/pictures/profile_use/experience/tonghsun.png" alt="童訊科技股份有限公司商標" width="144" height="144">
                     </picture>
                     <p class="title zhw">童訊科技股份有限公司</p>
-                    <p class="description zhw">課程助教（兼職）</p>
                     <p class="time zhw">2024/09 ~ Present</p>
                 </a>
             </div>
+            
             <h3 class="zhw" id="activities">在校經歷</h3>
             <div class="items">
-                <a class="item" href="https://35.infor.org" target="_blank">
+                <a class="item open-popup" href="#" data-name="act_infor35th" data-lang="tw">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/infor35th.webp" type="image/webp">
                         <source srcset="/pictures/profile_use/experience/infor35th.png" type="image/png">
                         <img src="/pictures/profile_use/experience/infor35th.png" alt="INFOR35th社徽" width="144" height="144">
                     </picture>
                     <p class="title zhw">建國中學資訊社35th</p>
-                    <p class="description zhw">內務</p>
                     <p class="time zhw">2023/02 ~ 2023/07</p>
                 </a>
-                <a class="item" href="https://35.infor.org" target="_blank">
-                    <picture>
-                        <source srcset="/pictures/profile_use/experience/infor35th_web.webp" type="image/webp">
-                        <source srcset="/pictures/profile_use/experience/infor35th_web.png" type="image/png">
-                        <img src="/pictures/profile_use/experience/infor35th_web.png" alt="INFOR35th網頁培訓班視覺圖" width="144" height="144">
-                    </picture>
-                    <p class="title zhw">建國中學資訊社35th網頁培訓班</p>
-                    <p class="description zhw">共同講師</p>
-                    <p class="time zhw">2023/03 ~ 2023/06</p>
-                </a>
-                <a class="item" href="https://www.facebook.com/Utaipeisa2.0/" target="_blank">
+                <a class="item open-popup" href="#" data-name="act_utsa11st" data-lang="tw">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/utsa.webp" type="image/webp">
                         <source srcset="/pictures/profile_use/experience/utsa.jpg" type="image/jpg">
                         <img src="/pictures/profile_use/experience/utsa.jpg" alt="臺北市立大學學生會標誌" width="144" height="144">
                     </picture>
                     <p class="title zhw">臺北市立大學學生會11st</p>
-                    <p class="description zhw">資訊部</p>
                     <p class="time zhw">2024/09 ~ Present</p>
                 </a>
             </div>
+            
             <h3 class="zhw" id="skills">技能</h3>
             <div class="smallitems">
                 <div class="item">
@@ -180,6 +176,7 @@
                     <p class="title zhw">Java</p>
                 </div>
             </div>
+            
             <h3 class="zhw" id="links">個人連結</h3>
             <details id="social_platforms" open>
                 <summary class="zhwb">社群平台</summary>
@@ -249,6 +246,7 @@
             </details>
         </div>
     </main>
+
     <footer>
         <p class="enw2" id="siterights">
             Copyright © 2023-2024
@@ -258,10 +256,19 @@
             All Rights Reserved
         </p>
     </footer>
+
     <div id="backtotop">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#005048" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
         </svg>
     </div>
+
+    <!-- detail window -->
+    <div class="overlay"></div>
+    <div class="popup">
+        <div class="popup-content"></div>
+        <div class="close-btn">關閉</div>
+    </div>
+    <script src="/scripts/window.js" type="text/javascript" defer></script>
 </body>
 </html>
