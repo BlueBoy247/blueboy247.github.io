@@ -31,9 +31,13 @@ fetch(apiUrl)
     .then(data => {
         const gitHubUpdateTime = data.pushed_at;
         const date = new Date(gitHubUpdateTime);
-        const utc8Date = new Date(date.getTime() + 8 * 60 * 60 * 1000);
-        const formattedDate = `${utc8Date.getFullYear()}/${String(utc8Date.getMonth() + 1).padStart(2, '0')}/${String(utc8Date.getDate()).padStart(2, '0')} ${String(utc8Date.getUTCHours()).padStart(2, '0')}:${String(utc8Date.getUTCMinutes()).padStart(2, '0')}:${String(utc8Date.getUTCSeconds()).padStart(2, '0')} (UTC+8)`;
-
+        let timezone = date.getTimezoneOffset() / -60;
+        if(timezone > 0){
+            timezone = `+${timezone}`;
+        }else{
+            timezone = `${timezone}`;
+        }
+        const formattedDate = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}:${String(date.getSeconds()).padStart(2, '0')} (UTC${timezone})`;
         lastupdatetime.innerText = formattedDate;
     })
     .catch(error => {
