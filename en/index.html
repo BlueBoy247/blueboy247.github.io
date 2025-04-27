@@ -74,7 +74,7 @@
             <button class="enw2" onclick="scrollToBlock('experience')">Work Experience</button>
             <button class="enw2" onclick="scrollToBlock('activities')">Extracurricular Activities</button>
             <button class="enw2" onclick="scrollToBlock('skills')">Skills</button>
-            <button class="enw2" onclick="scrollToBlock('certifications')">Certifications</button>
+            <button class="enw2" onclick="scrollToBlock('certifications')">Licenses & Certifications</button>
             <button class="enw2" onclick="scrollToBlock('links')">Links</button>
             <script src="/scripts/subnav.js" type="text/javascript" defer></script>
         </div>
@@ -86,16 +86,6 @@
             <p class="enw2">I'm now striving to excel in full-stack development. Additionally, I have a keen interest in APP development, IoT, machine learning, and cybersecurity technologies.</p>
             <h3 class="enw2" id="education">Education</h3>
             <div class="items">
-                <a class="item" href="https://www.ck.tp.edu.tw/nss/s/LANGUAGE/index" target="_blank">
-                    <picture>
-                        <source srcset="/pictures/profile_use/education/ck_seal.webp" type="image/webp">
-                        <source srcset="/pictures/profile_use/education/ck_seal.png" type="image/png">
-                        <img src="/pictures/profile_use/education/ck_seal.png" alt="Chien Kuo High School's seal">
-                    </picture>
-                    <p class="title enw2">Taipei Municipal Chien Kuo High School</p>
-                    <p class="description enw2">General Subjects Program</p>
-                    <p class="time enw2">Sep 2021 ~ Jun 2024</p>
-                </a>
                 <a class="item" href="https://cs.utaipei.edu.tw/index.php?Lang=en" target="_blank">
                     <picture>
                         <source srcset="/pictures/profile_use/education/utaipei_seal.webp" type="image/webp">
@@ -106,10 +96,20 @@
                     <p class="description enw2">Computer Science, BS</p>
                     <p class="time enw2">Sep 2024 ~ Present</p>
                 </a>
+                <a class="item" href="https://www.ck.tp.edu.tw/nss/s/LANGUAGE/index" target="_blank">
+                    <picture>
+                        <source srcset="/pictures/profile_use/education/ck_seal.webp" type="image/webp">
+                        <source srcset="/pictures/profile_use/education/ck_seal.png" type="image/png">
+                        <img src="/pictures/profile_use/education/ck_seal.png" alt="Chien Kuo High School's seal">
+                    </picture>
+                    <p class="title enw2">Taipei Municipal Chien Kuo High School</p>
+                    <p class="description enw2">General Subjects Program</p>
+                    <p class="time enw2">Sep 2021 ~ Jun 2024</p>
+                </a>
             </div>
 
             <h3 class="enw2" id="experience">Work Experience</h3>
-            <div class="items">
+            <div class="scrollitems">
                 <a class="item open-popup" href="#" data-name="exp_tonghsun" data-lang="en">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/tonghsun.webp" type="image/webp">
@@ -122,7 +122,25 @@
             </div>
 
             <h3 class="enw2" id="activities">Extracurricular Activities</h3>
-            <div class="items">
+            <div class="scrollitems">
+                <a class="item open-popup" href="#" data-name="act_utsys" data-lang="en">
+                    <picture>
+                        <source srcset="/pictures/profile_use/experience/utsys.webp" type="image/webp">
+                        <source srcset="/pictures/profile_use/experience/utsys.png" type="image/png">
+                        <img src="/pictures/profile_use/experience/utsys.png" alt="Leave Application System's Icon" width="144" height="144">
+                    </picture>
+                    <p class="title enw2">UTaipei System Student Collab Program</p>
+                    <p class="time enw2">Mar 2025 ~ Present</p>
+                </a>
+                <a class="item open-popup" href="#" data-name="act_utsa11st" data-lang="en">
+                    <picture>
+                        <source srcset="/pictures/profile_use/experience/utsa.webp" type="image/webp">
+                        <source srcset="/pictures/profile_use/experience/utsa.jpg" type="image/jpg">
+                        <img src="/pictures/profile_use/experience/utsa.jpg" alt="UTSA's seal">
+                    </picture>
+                    <p class="title enw2">University of Taipei Student Association 11st</p>
+                    <p class="time enw2">Sep 2024 ~ Present</p>
+                </a>
                 <a class="item open-popup" href="#" data-name="act_infor35th" data-lang="en">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/infor35th.webp" type="image/webp">
@@ -131,15 +149,6 @@
                     </picture>
                     <p class="title enw2">INFOR 35th</p>
                     <p class="time enw2">Feb 2023 ~ Jul 2023</p>
-                </a>
-                <a class="item open-popup" href="#" data-name="act_utsa11st" data-lang="en">
-                    <picture>
-                        <source srcset="/pictures/profile_use/experience/utsa.webp" type="image/webp">
-                        <source srcset="/pictures/profile_use/experience/utsa.jpg" type="image/jpg">
-                        <img src="/pictures/profile_use/experience/utsa.jpg" alt="UTSA's seal">
-                    </picture>
-                    <p class="title enw2">University Of Taipei Student Association 11st</p>
-                    <p class="time enw2">Sep 2024 ~ Present</p>
                 </a>
             </div>
 
@@ -167,7 +176,7 @@
                 </div>
                 <div class="item">
                     <img src="/pictures/profile_use/skill/c.svg" alt="C icon">
-                    <p class="title enw2">C</p>
+                    <p class="title enw2">C Language</p>
                 </div>
                 <div class="item">
                     <img src="/pictures/profile_use/skill/arduino.svg" alt="Arduino icon">
@@ -179,20 +188,29 @@
                 </div>
             </div>
 
-            <h3 class="enw2" id="certifications">Certifications</h3>
-            <div class="items">
+            <h3 class="enw2" id="certifications">Licenses & Certifications</h3>
+            <div class="scrollitems">
+                <a class="item" href="https://www.hackerrank.com/certificates/44c1af587451" target="_blank">
+                    <img src="/pictures/profile_use/link/hackerrank.svg" alt="HackerRank logo">
+                    <p class="title enw2">Problem Solving (Basic)</p>
+                    <p class="description enw2">HackerRank</p>
+                    <p class="time enw2">Feb 06, 2025</p>
+                </a>
                 <a class="item" href="https://www.freecodecamp.org/certification/BlueBoy247/responsive-web-design" target="_blank">
+                    <img src="/pictures/profile_use/link/freecodecamp.svg" alt="freeCodeCamp logo">
                     <p class="title enw2">Responsive Web Design</p>
                     <p class="description enw2">freeCodeCamp</p>
                     <p class="time enw2">Nov 13, 2024</p>
                 </a>
                 <a class="item" href="https://www.hackerrank.com/certificates/d986ce5d9af8" target="_blank">
+                    <img src="/pictures/profile_use/link/hackerrank.svg" alt="HackerRank logo">
                     <p class="title enw2">Python (Basic)</p>
                     <p class="description enw2">HackerRank</p>
                     <p class="time enw2">Sep 20, 2024</p>
                 </a>
                 <a class="item" href="https://www.gept.org.tw/2022/GEPT1/org_tw/Letter_to_admission_office.pdf" target="_blank">
-                    <p class="title enw2">The General English Proficiency Test<br>(Intermediate level)</p>
+                    <img src="/pictures/profile_use/certifications/gept.png" alt="GEPT logo">
+                    <p class="title enw2">GEPT Intermediate Level</p>
                     <p class="description enw2">The Language Training and Testing Center</p>
                     <p class="time enw2">Jan 24, 2022</p>
                 </a>

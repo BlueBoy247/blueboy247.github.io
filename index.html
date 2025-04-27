@@ -71,12 +71,13 @@
             <button class="zhw" onclick="scrollToBlock('experiences')">工作經歷</button>
             <button class="zhw" onclick="scrollToBlock('activities')">在校經歷</button>
             <button class="zhw" onclick="scrollToBlock('skills')">技能</button>
+            <button class="zhw" onclick="scrollToBlock('certifications')">證照與認證</button>
             <button class="zhw" onclick="scrollToBlock('links')">個人連結</button>
             <script src="/scripts/subnav.js" type="text/javascript" defer></script>
         </div>
 
         <div class="content">
-            <h2 class="zhw" id="intro">Allen Chang</h2>
+            <h2 class="zhw" id="intro">Allen Chang (張育綸)</h2>
             <hr>
             <p class="zhw">一名正在努力不爆肝的大學生。</p>
             <p class="zhw">目前正在朝全端開發努力，此外也對應用程式開發、物聯網、機器學習及資安技術等領域有興趣。</p>
@@ -84,16 +85,6 @@
             
             <h3 class="zhw" id="education">學歷</h3>
             <div class="items">
-                <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
-                    <picture>
-                        <source srcset="/pictures/profile_use/education/ck_seal.webp" type="image/webp">
-                        <source srcset="/pictures/profile_use/education/ck_seal.png" type="image/png">
-                        <img src="/pictures/profile_use/education/ck_seal.png" alt="建國中學校徽" width="144" height="144">
-                    </picture>
-                    <p class="title zhw">臺北市立建國高級中學</p>
-                    <p class="description zhw">普通科</p>
-                    <p class="time zhw">2021/09 ~ 2024/06</p>
-                </a>
                 <a class="item" href="https://cs.utaipei.edu.tw/index.php?Lang=zh-tw" target="_blank">
                     <picture>
                         <source srcset="/pictures/profile_use/education/utaipei_seal.webp" type="image/webp">
@@ -104,10 +95,20 @@
                     <p class="description zhw">資訊科學系</p>
                     <p class="time zhw">2024/09 ~ Present</p>
                 </a>
+                <a class="item" href="https://www.ck.tp.edu.tw/" target="_blank">
+                    <picture>
+                        <source srcset="/pictures/profile_use/education/ck_seal.webp" type="image/webp">
+                        <source srcset="/pictures/profile_use/education/ck_seal.png" type="image/png">
+                        <img src="/pictures/profile_use/education/ck_seal.png" alt="建國中學校徽" width="144" height="144">
+                    </picture>
+                    <p class="title zhw">臺北市立建國高級中學</p>
+                    <p class="description zhw">普通科</p>
+                    <p class="time zhw">2021/09 ~ 2024/06</p>
+                </a>
             </div>
             
             <h3 class="zhw" id="experiences">工作經歷</h3>
-            <div class="items">
+            <div class="scrollitems">
                 <a class="item open-popup" href="#" data-name="exp_tonghsun" data-lang="tw">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/tonghsun.webp" type="image/webp">
@@ -120,15 +121,15 @@
             </div>
             
             <h3 class="zhw" id="activities">在校經歷</h3>
-            <div class="items">
-                <a class="item open-popup" href="#" data-name="act_infor35th" data-lang="tw">
+            <div class="scrollitems">
+                <a class="item open-popup" href="#" data-name="act_utsys" data-lang="tw">
                     <picture>
-                        <source srcset="/pictures/profile_use/experience/infor35th.webp" type="image/webp">
-                        <source srcset="/pictures/profile_use/experience/infor35th.png" type="image/png">
-                        <img src="/pictures/profile_use/experience/infor35th.png" alt="INFOR35th社徽" width="144" height="144">
+                        <source srcset="/pictures/profile_use/experience/utsys.webp" type="image/webp">
+                        <source srcset="/pictures/profile_use/experience/utsys.png" type="image/png">
+                        <img src="/pictures/profile_use/experience/utsys.png" alt="請假系統標誌" width="144" height="144">
                     </picture>
-                    <p class="title zhw">建國中學資訊社35th</p>
-                    <p class="time zhw">2023/02 ~ 2023/07</p>
+                    <p class="title zhw">臺北市立大學 校務系統學生協作計畫</p>
+                    <p class="time zhw">2025/03 ~ Present</p>
                 </a>
                 <a class="item open-popup" href="#" data-name="act_utsa11st" data-lang="tw">
                     <picture>
@@ -137,7 +138,16 @@
                         <img src="/pictures/profile_use/experience/utsa.jpg" alt="臺北市立大學學生會標誌" width="144" height="144">
                     </picture>
                     <p class="title zhw">臺北市立大學學生會11st</p>
-                    <p class="time zhw">2024/09 ~ Present</p>
+                    <p class="time zhw">2024/09 ~ 2025/05</p>
+                </a>
+                <a class="item open-popup" href="#" data-name="act_infor35th" data-lang="tw">
+                    <picture>
+                        <source srcset="/pictures/profile_use/experience/infor35th.webp" type="image/webp">
+                        <source srcset="/pictures/profile_use/experience/infor35th.png" type="image/png">
+                        <img src="/pictures/profile_use/experience/infor35th.png" alt="INFOR35th社徽" width="144" height="144">
+                    </picture>
+                    <p class="title zhw">建國中學資訊社35th</p>
+                    <p class="time zhw">2023/02 ~ 2023/07</p>
                 </a>
             </div>
             
@@ -165,7 +175,7 @@
                 </div>
                 <div class="item">
                     <img src="/pictures/profile_use/skill/c.svg" alt="C icon" width="96" height="96">
-                    <p class="title zhw">C</p>
+                    <p class="title zhw">C Language</p>
                 </div>
                 <div class="item">
                     <img src="/pictures/profile_use/skill/arduino.svg" alt="Arduino icon" width="96" height="96">
@@ -175,6 +185,34 @@
                     <img src="/pictures/profile_use/skill/java.svg" alt="Java icon" width="96" height="96">
                     <p class="title zhw">Java</p>
                 </div>
+            </div>
+
+            <h3 class="zhw" id="certifications">證照與認證</h3>
+            <div class="scrollitems">
+                <a class="item" href="https://www.hackerrank.com/certificates/44c1af587451" target="_blank">
+                    <img src="/pictures/profile_use/link/hackerrank.svg" alt="HackerRank logo">
+                    <p class="title zhw">Problem Solving (Basic)</p>
+                    <p class="description zhw">HackerRank</p>
+                    <p class="time zhw">2025/02/06</p>
+                </a>
+                <a class="item" href="https://www.freecodecamp.org/certification/BlueBoy247/responsive-web-design" target="_blank">
+                    <img src="/pictures/profile_use/link/freecodecamp.svg" alt="freeCodeCamp logo">
+                    <p class="title zhw">Responsive Web Design</p>
+                    <p class="description zhw">freeCodeCamp</p>
+                    <p class="time zhw">2024/11/13</p>
+                </a>
+                <a class="item" href="https://www.hackerrank.com/certificates/d986ce5d9af8" target="_blank">
+                    <img src="/pictures/profile_use/link/hackerrank.svg" alt="HackerRank logo">
+                    <p class="title zhw">Python (Basic)</p>
+                    <p class="description zhw">HackerRank</p>
+                    <p class="time zhw">2024/09/20</p>
+                </a>
+                <a class="item" href="https://www.gept.org.tw/Exam_Intro/t02_introduction.asp" target="_blank">
+                    <img src="/pictures/profile_use/certifications/gept.png" alt="GEPT logo">
+                    <p class="title zhw">全民英檢中級</p>
+                    <p class="description zhw">財團法人語言訓練測驗中心</p>
+                    <p class="time zhw">2022/01/24</p>
+                </a>
             </div>
             
             <h3 class="zhw" id="links">個人連結</h3>
