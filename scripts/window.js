@@ -1,12 +1,14 @@
 $(document).ready(function () {
     $(".open-popup").on("click", function (e) {
         e.preventDefault(); // 阻止默認連結行為
+        $(".popup-content").html(""); // 清空彈出視窗內容
+        
         const name = $(this).data("name"); // 取得 data-name 的值
         const lang = $(this).data("lang"); // 取得 data-lang 的值
         const url = `/sections/${lang}/${name}.html`; // 拼接外部 HTML 的 URL
 
         // 動態載入 HTML 到彈出視窗中
-        $(".popup-content").load(url, function (response, status, xhr) {
+        $(".popup-content").load(url, function (_, status) {
             if (status == "error") {
                 $(".popup-content").html("<p>載入失敗，請稍後再試。</p>");
             }
