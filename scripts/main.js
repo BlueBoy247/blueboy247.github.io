@@ -32,13 +32,14 @@ fetch(apiUrl)
         const gitHubUpdateTime = data.pushed_at;
         const date = new Date(gitHubUpdateTime);
         let timezone = date.getTimezoneOffset() / -60;
-        if(timezone > 0){
-            timezone = `+${timezone}`;
-        }else{
-            timezone = `${timezone}`;
-        }
-        const formattedDate = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}:${String(date.getSeconds()).padStart(2, '0')} (UTC${timezone})`;
-        lastupdatetime.innerText = formattedDate;
+        timezone = (timezone > 0) ? `+${timezone}` : `${timezone}`;
+
+        const formattedMonth = String(date.getMonth() + 1).padStart(2, '0');
+        const formattedDate = String(date.getDate()).padStart(2, '0');
+        const formattedHour = String(date.getHours()).padStart(2, '0');
+        const formattedMinute = String(date.getMinutes()).padStart(2, '0');
+        const formattedSecond = String(date.getSeconds()).padStart(2, '0');
+        lastupdatetime.innerText = `${date.getFullYear()}/${formattedMonth}/${formattedDate} ${formattedHour}:${formattedMinute}:${formattedSecond} (UTC${timezone})`;
     })
     .catch(error => {
         console.error('Fetch error:', error);
@@ -52,3 +53,12 @@ backtotop.addEventListener('click',function(){
         behavior: 'smooth'
     });
 })
+
+// experience block
+for(let block of document.getElementsByClassName('scrollitems')){
+    // 滑鼠滾輪滾動監聽
+    block.addEventListener('wheel', (e) => {
+        e.preventDefault(); // 阻止預設的垂直滾動
+        block.scrollLeft += e.deltaY; // 橫向滾動
+    });
+}
