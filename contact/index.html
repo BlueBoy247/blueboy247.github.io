@@ -77,12 +77,21 @@
                         <input type="email" class="text zhw" id="email" name="email" placeholder="您的電子信箱" autocomplete="email" required>
                     </li>
                     <li>
-                        <label class="zhw label" for="purpose" id="purpose_label">聯絡目的&ensp;<span class="required_mark">*</span></label>
+                        <span class="zhw label" id="purpose_label">聯絡目的&ensp;<span class="required_mark">*</span></span>
                     </li>
                     <li>
-                        <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="contact" required checked><span class="optionw">一般聯絡</span></label>
-                        <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="website-suggestion" required><span class="optionw">網站改善建議</span></label>
-                        <label class="zhw"><input type="radio" name="type" class="option zhw" id="purpose" value="project-suggestion" required><span class="optionw">專案改善建議</span></label>
+                        <label class="zhw" for="purpose1">
+                            <input type="radio" name="type" class="option zhw" id="purpose1" value="contact" required checked>
+                            <span class="optionw">一般聯絡</span>
+                        </label>
+                        <label class="zhw" for="purpose2">
+                            <input type="radio" name="type" class="option zhw" id="purpose2" value="website-suggestion" required>
+                            <span class="optionw">網站改善建議</span>
+                        </label>
+                        <label class="zhw" for="purpose3">
+                            <input type="radio" name="type" class="option zhw" id="purpose3" value="project-suggestion" required>
+                            <span class="optionw">專案改善建議</span>
+                        </label>
                     </li>
                     <li>
                         <label class="zhw label" for="subject" id="subject_label">主旨&ensp;<span class="required_mark">*</span></label>
