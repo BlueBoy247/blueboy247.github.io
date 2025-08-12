@@ -1,6 +1,6 @@
 .subnav{
     margin: 0 5vw;
-    padding: 0 2%;
+    padding: 0;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -74,7 +74,7 @@
     transition: 0.5s;
 }
 .scrollitems .item{
-    width: 350px;
+    width: 300px;
 }
 .smallitems .item{
     display: inline-flex;
@@ -119,7 +119,7 @@
 }
 .items .item .description,
 .scrollitems .item .description,
-.items .item .time
+.items .item .time,
 .scrollitems .item .time{
     font-size: 16px;
     text-align: center;
@@ -138,6 +138,19 @@ details{
 }
 summary{
     font-size: 20px;
+}
+.list .title{
+    font-size: 18px;
+}
+.list .description{
+    font-size: 16px;
+}
+.list .time{
+    font-size: 16px;
+    color: #666666;
+}
+.list li{
+    margin: 0.5% 0;
 }
 @media only screen and (max-width: 1280px){
     .title{
