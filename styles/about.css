@@ -157,10 +157,10 @@ summary{
     transform: translate(-50%, -50%);
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: min(40px, 5%);
     z-index: 1000;
-    border-radius: 8px;
-    width: 80%;
+    border-radius: 10px;
+    width: 50%;
 }
 .overlay {
     display: none;
@@ -173,34 +173,98 @@ summary{
     z-index: 999;
 }
 .popup-content {
-    max-height: 70vh;
-    overflow-y: auto;
-}
-.popup-content::-webkit-scrollbar {
-    width: 5px;
-}
-.popup-content::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid slategrey;
+    max-height: 80vh;
 }
 .popup-content h2{
     margin: 1.5% 0;
     font-size: 30px;
+    
+    a{
+        color: #005048;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #46ada3;
+    }
 }
-.popup-content h3{
-    margin: 1% 0;
-    font-size: 24px;
+.popup-content ul{
+    overflow-y: auto;
+    max-height: 60vh;
+    margin: 0 1%;
+    padding: 1% 0;
+    list-style-type: none;
 }
-.popup-content p,
+.popup-content ul::-webkit-scrollbar {
+    width: 5px;
+}
+.popup-content ul::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 .popup-content li{
-    margin: 0.5% 0;
-    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+}
+.popup-content .timeline-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1%;
+    height: inherit;
+}
+.popup-content .timeline-dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 1px #46ada3;
+}
+.popup-content .timeline-line{
+    width: 2px;
+    height: calc(101% - 18px);
+    background: linear-gradient(to bottom, #46ada3, #2d726b);
+}
+.popup-content li:last-child .timeline-line{
+    display: none;
+}
+.popup-content .timeline-content{
+    padding-bottom: 10px;
+}
+.popup .title{
+    font-size: 20px;
+}
+.popup .time{
+    font-size: 16px;
+    color: #666666;
 }
 .close-btn {
-    display: block;
-    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto 0 auto;
+    padding: min(10px, 1.5%) min(20px, 3%);
+    border: 1px solid #46ada3;
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    color: #007BFF;
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+.close-btn:hover{
+    background-color: #46ada3;
+}
+@media only screen and (max-width: 768px){
+    .popup{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .popup h2{
+        font-size: 24px;
+    }
+    .popup .title{
+        font-size: 16px;
+    }
+    .popup .time{
+        font-size: 14px;
+    }
 }
