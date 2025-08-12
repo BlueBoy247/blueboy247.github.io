@@ -10,7 +10,10 @@ $(document).ready(function () {
         // 動態載入 HTML 到彈出視窗中
         $(".popup-content").load(url, function (_, status) {
             if (status == "error") {
-                $(".popup-content").html("<p>載入失敗，請稍後再試。</p>");
+                const content = lang == "en"
+                                ? $("<p>Loading failed, please try again later.</p>")
+                                : $("<p>載入失敗，請稍後再試。</p>");
+                $(".popup-content").html(content);
             }
         });
 
