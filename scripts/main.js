@@ -54,11 +54,18 @@ backtotop.addEventListener('click',function(){
     });
 })
 
-// experience block
+// scrollable block
 for(let block of document.getElementsByClassName('scrollitems')){
     // 滑鼠滾輪滾動監聽
     block.addEventListener('wheel', (e) => {
-        e.preventDefault(); // 阻止預設的垂直滾動
-        block.scrollLeft += e.deltaY; // 橫向滾動
+        let widthSum = 0;
+        for(let item of block.getElementsByClassName('item')){
+            widthSum += item.offsetWidth;
+        }
+        // 若內容超過可顯示寬度
+        if(widthSum > block.offsetWidth){
+            e.preventDefault(); // 阻止預設的垂直滾動
+            block.scrollLeft += e.deltaY; // 橫向滾動
+        }
     });
 }
