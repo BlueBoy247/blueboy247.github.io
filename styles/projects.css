@@ -84,7 +84,7 @@
     background-color: #46ada3;
     border-radius: 5px;
     padding: 2px 5px;
-    margin: 2px 5px;
+    margin: 2px 7px 2px 0;
     line-height: 1.5;
     white-space: nowrap;
 }
@@ -129,11 +129,17 @@
     .proimage{
         width: 60%;
     }
+    .protitle{
+        font-size: 20px;
+    }
+    .protime{
+        font-size: 14px;
+    }
     .protag{
         justify-content: center;
 
         span{
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 }
