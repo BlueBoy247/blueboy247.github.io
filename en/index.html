@@ -72,8 +72,8 @@
             <button class="enw2" onclick="scrollToBlock('intro')">Self-Intro</button>
             <button class="enw2" onclick="scrollToBlock('education')">Education</button>
             <button class="enw2" onclick="scrollToBlock('experience')">Work Experience</button>
-            <button class="enw2" onclick="scrollToBlock('activities')">Extracurricular Activities</button>
-            <button class="enw2" onclick="scrollToBlock('skills')">Skills</button>
+            <button class="enw2" onclick="scrollToBlock('communities')">Clubs & Communities</button>
+            <button class="enw2" onclick="scrollToBlock('skills')" style="display: none;">Skills</button>
             <button class="enw2" onclick="scrollToBlock('certifications')">Licenses & Certifications</button>
             <button class="enw2" onclick="scrollToBlock('links')">Links</button>
             <script src="/scripts/subnav.js" type="text/javascript" defer></script>
@@ -82,8 +82,9 @@
         <div class="content">
             <h2 class="enw2" id="intro">Allen Chang (Yu-Lun Chang)</h2>
             <hr>
-            <p class="enw2">A college student living in the Republic of China, the country that is also known as Taiwan.</p>
-            <p class="enw2">I'm now striving to excel in full-stack development. Additionally, I have a keen interest in APP development, IoT, machine learning, and cybersecurity technologies.</p>
+            <p class="enw2">An undergraduate living in the Republic of China, the country that is also known as Taiwan.</p>
+            <p class="enw2">I'm now striving to excel in full-stack development. Additionally, I have a keen interest in IoT, AI, and cybersecurity technologies.</p>
+            <p class="enw2">My hobbies include playing piano, playing badminton, listening to music,  watching animes, reading light novels, and watching Virtual YouTubers streamings. I love the ACGN culture, and my favorite VTuber is Oozora Subaru from hololive.</p>
             <h3 class="enw2" id="education">Education</h3>
             <div class="items">
                 <a class="item" href="https://cs.utaipei.edu.tw/index.php?Lang=en" target="_blank">
@@ -94,7 +95,7 @@
                     </picture>
                     <p class="title enw2">University of Taipei</p>
                     <p class="description enw2">Computer Science, BS</p>
-                    <p class="time enw2">Sep 2024 ~ Present</p>
+                    <p class="time enw2">Sep 2024 - Present</p>
                 </a>
                 <a class="item" href="https://www.ck.tp.edu.tw/nss/s/LANGUAGE/index" target="_blank">
                     <picture>
@@ -104,7 +105,7 @@
                     </picture>
                     <p class="title enw2">Taipei Municipal Chien Kuo High School</p>
                     <p class="description enw2">General Subjects Program</p>
-                    <p class="time enw2">Sep 2021 ~ Jun 2024</p>
+                    <p class="time enw2">Sep 2021 - Jun 2024</p>
                 </a>
             </div>
 
@@ -114,32 +115,26 @@
                     <picture>
                         <source srcset="/pictures/profile_use/experience/tonghsun.webp" type="image/webp">
                         <source srcset="/pictures/profile_use/experience/tonghsun.png" type="image/png">
-                        <img src="/pictures/profile_use/experience/tonghsun.png" alt="Trademark of Tong Hsun Technology Co., Ltd.">
+                        <img src="/pictures/profile_use/experience/tonghsun.png" alt="Trademark of 童訊科技股份有限公司">
                     </picture>
-                    <p class="title enw2">Tong Hsun Technology Co., Ltd.</p>
-                    <p class="time enw2">Sep 2024 ~ Present</p>
+                    <p class="title enw2">童訊科技股份有限公司</p>
+                    <p class="time enw2">Sep 2024 - Present</p>
                 </a>
             </div>
 
-            <h3 class="enw2" id="activities">Extracurricular Activities</h3>
+            <h3 class="enw2" id="communities">Clubs & Communities</h3>
             <div class="scrollitems">
-                <a class="item open-popup" href="#" data-name="act_utsys" data-lang="en">
                     <picture>
-                        <source srcset="/pictures/profile_use/experience/utsys.webp" type="image/webp">
-                        <source srcset="/pictures/profile_use/experience/utsys.png" type="image/png">
-                        <img src="/pictures/profile_use/experience/utsys.png" alt="Leave Application System's Icon" width="144" height="144">
                     </picture>
-                    <p class="title enw2">UTaipei System Student Collab Program</p>
-                    <p class="time enw2">Mar 2025 ~ Present</p>
                 </a>
-                <a class="item open-popup" href="#" data-name="act_utsa11st" data-lang="en">
+                <a class="item open-popup" href="#" data-name="act_utsa" data-lang="en">
                     <picture>
                         <source srcset="/pictures/profile_use/experience/utsa.webp" type="image/webp">
                         <source srcset="/pictures/profile_use/experience/utsa.jpg" type="image/jpg">
                         <img src="/pictures/profile_use/experience/utsa.jpg" alt="UTSA's seal">
                     </picture>
-                    <p class="title enw2">University of Taipei Student Association 11st</p>
-                    <p class="time enw2">Sep 2024 ~ Present</p>
+                    <p class="title enw2">University of Taipei Student Association</p>
+                    <p class="time enw2">Sep 2024 - Present</p>
                 </a>
                 <a class="item open-popup" href="#" data-name="act_infor35th" data-lang="en">
                     <picture>
@@ -148,12 +143,12 @@
                         <img src="/pictures/profile_use/experience/infor35th.png" alt="INFOR35th's seal">
                     </picture>
                     <p class="title enw2">INFOR 35th</p>
-                    <p class="time enw2">Feb 2023 ~ Jul 2023</p>
+                    <p class="time enw2">Feb 2023 - Jul 2023</p>
                 </a>
             </div>
 
-            <h3 class="enw2" id="skills">Skills</h3>
-            <div class="smallitems">
+            <h3 class="enw2" id="skills" style="display: none;">Skills</h3>
+            <div class="smallitems" style="display: none;">
                 <div class="item">
                     <img src="/pictures/profile_use/skill/python.svg" alt="Python3 icon">
                     <p class="title enw2">Python 3</p>
@@ -306,8 +301,8 @@
     <!-- detail window -->
     <div class="overlay"></div>
     <div class="popup">
-        <div class="popup-content"></div>
-        <div class="close-btn">Close</div>
+        <div class="popup-content enw2"></div>
+        <div class="close-btn enw2">Close</div>
     </div>
     <script src="/scripts/window.js" type="text/javascript" defer></script>
 </body>
