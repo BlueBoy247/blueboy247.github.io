@@ -1,29 +1,3 @@
-.subnav{
-    margin: 0 5vw;
-    padding: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-.subnav button{
-    color: #000000;
-    margin: 10px;
-    padding: 0 1%;
-    border: solid 3px #46ada3;
-    border-radius: 5px;
-    background-color: inherit;
-    min-width: 150px;
-    height: 50px;
-    font-size: 20px;
-}
-.subnav button:hover{
-    background-color: #46ada3;
-    cursor: pointer;
-}
-.subnav::-webkit-scrollbar{
-    display: none;
-}
-
 .items{
     display: grid;
     gap: 7px;

@@ -33,6 +33,7 @@
      crossorigin="anonymous"></script>
     <!-- other source -->
     <link rel="stylesheet" href="/styles/projects.css">
+    <link rel="stylesheet" href="/styles/subnav.css">
 </head>
 <body>
     <header>
@@ -65,14 +66,16 @@
                 <span class="zhwb">專案作品</span>
             </p>
         </div>
-        <div id="choose">
-            <select class="zhw" id="choosetype">
-                <option value="all" selected>全部</option>
-                <option value="personal">個人專案</option>
-                <option value="infor35th">@INFOR 35th</option>
-                <option value="utsa">@臺北市立大學學生會資訊部</option>
-                <option value="utsys">@臺北市立大學計算機與網路中心</option>
-            </select>
+        <div class="subnav">
+            <button class="zhw" onclick="projectFilter('all')">全部</button>
+            <button class="zhw" onclick="projectFilter('personal')">個人專案</button>
+            <button class="zhw" onclick="projectFilter('course')">課程專題</button>
+            <button class="zhw" onclick="projectFilter('competition')">比賽作品</button>
+            <button class="zhw" onclick="projectFilter('infor35th')">@INFOR 35th</button>
+            <button class="zhw" onclick="projectFilter('utsa')">@臺北市立大學學生會資訊部</button>
+            <button class="zhw" onclick="projectFilter('utsys')">@臺北市立大學計算機與網路中心</button>
+            <button class="zhw" onclick="projectFilter('utcssys')">@臺北市立大學資訊科學系</button>
+            <script src="/scripts/subnav.js" type="text/javascript" defer></script>
         </div>
         <div id="projectc">
             <a href="https://carbon-diary.utaipei.edu.tw/" target="_blank" class="problock utsys">
@@ -176,27 +179,6 @@
             All Rights Reserved
         </p>
     </footer>
-    <script>
-        document.getElementById('choosetype').addEventListener('change',function(){
-            let type = document.getElementById('choosetype').value;
-            if(type != 'all'){
-                let typeblock = document.getElementsByClassName(type);
-                let allblock = document.getElementsByClassName('problock');
-                for(let block of allblock){
-                    block.style.display = 'none';
-                }
-                for(let block of typeblock){
-                    block.removeAttribute('style');
-                }
-            }
-            else{
-                let allblock = document.getElementsByClassName('problock');
-                for(let block of allblock){
-                    block.removeAttribute('style');
-                }
-            }
-        })
-    </script>
     <div id="backtotop">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#005048" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>

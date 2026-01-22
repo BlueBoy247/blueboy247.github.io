@@ -17,3 +17,22 @@ function scrollToBlock(blockName) {
         behavior: 'smooth'
     });
 }
+
+function projectFilter(type){
+    if(type == 'all'){
+        let allblock = document.getElementsByClassName('problock');
+        for(let block of allblock){
+            block.removeAttribute('style');
+        }
+    }
+    else{
+        let typeblock = document.getElementsByClassName(type);
+        let allblock = document.getElementsByClassName('problock');
+        for(let block of allblock){
+            block.style.display = 'none';
+        }
+        for(let block of typeblock){
+            block.removeAttribute('style');
+        }
+    }
+}
